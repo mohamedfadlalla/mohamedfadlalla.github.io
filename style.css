@@ -1,0 +1,19 @@
+/* style.css */
+
+/* Simple reset for testing */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* A simple style to confirm the CSS file is linked */
+h1 {
+    color: green; /* This will be green if style.css is linked */
+    border-bottom: 2px solid green;
+    display: inline-block;
+    padding-bottom: 10px;
+}
