@@ -1,54 +1,344 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Fadalla - Services</title>
-    <!-- Link to the CSS file -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mohamed Fadlalla — Creative & Digital Agency</title>
+  <meta name="description" content="Mohamed Fadlalla — Branding, Design, Video, Web Development & Social Media Management for Sudanese businesses." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Mohamed Fadalla</h1>
-        <h2>Digital Branding & Web Services</h2>
-    </header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Mohamed <span>Fadlalla</span></a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="mainNav" class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="cta">Get Started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <p class="intro">Providing professional digital branding, social media management, and web development solutions.</p>
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Mohamed Fadlalla — Creative agency for Sudanese businesses</h1>
+          <p class="lead">Branding, websites, video, design, and social media management — an end-to-end digital team to launch and grow your business online.</p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="#packages">Explore Packages</a>
+            <a class="btn ghost" href="#portfolio">See Work</a>
+          </div>
 
-        <section id="pricing">
-            <h3>Final Pricing (Concise)</h3>
-            
-            <ul class="service-list">
-                <li>
-                    <span class="service-name">Branding + FB + LinkedIn (40 hrs/month):</span>
-                    <strong class="price main-price">≈ 240,000 SDG</strong>
-                </li>
-                <li>
-                    <span class="service-name">Add TikTok (4 videos/month):</span>
-                    <strong class="price add-on">+120,000 SDG</strong>
-                </li>
+          <ul class="quick-features" aria-hidden="false">
+            <li><strong>Full brand identity</strong> — logo, tone, guidelines</li>
+            <li><strong>Web & eCommerce</strong> — responsive, fast, secure</li>
+            <li><strong>Content & Video</strong> — social-first videos and motion</li>
+          </ul>
+        </div>
+
+        <div class="hero-card" aria-hidden="false">
+          <div class="card-header">
+            <strong>Starter</strong>
+            <span>From</span>
+            <div class="price">99<span>/mo</span></div>
+          </div>
+          <div class="card-body">
+            <p>Logo, 1-page site, social launch kit, 5 posts</p>
+            <a class="btn fullwidth" href="#contact">Book a Call</a>
+          </div>
+          <svg class="hero-decor" viewBox="0 0 200 200" aria-hidden="true">
+            <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#6aa7ff"/><stop offset="1" stop-color="#9fe7c9"/></linearGradient></defs>
+            <circle cx="100" cy="100" r="90" fill="url(#g)" opacity="0.15"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Services — everything a startup needs</h2>
+          <p>From identity to growth: core creative services plus business essentials that startups and local businesses always need.</p>
+        </div>
+
+        <div class="service-filters" role="tablist" aria-label="Filter services">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="branding">Branding</button>
+          <button class="filter" data-filter="web">Web</button>
+          <button class="filter" data-filter="video">Video</button>
+          <button class="filter" data-filter="social">Social</button>
+          <button class="filter" data-filter="growth">Growth</button>
+        </div>
+
+        <div class="services-grid" id="servicesGrid">
+          <!-- Card template repeated with category data-category -->
+          <article class="service-card" data-category="branding">
+            <h3>Brand Strategy & Identity</h3>
+            <p>Full brand discovery, logo, visual system, brand book, tone of voice and messaging that resonates with local audiences.</p>
+            <ul class="bullets"><li>Workshops</li><li>Logo & marks</li><li>Brand guidelines</li></ul>
+            <a class="more" href="#contact">Start Branding</a>
+          </article>
+
+          <article class="service-card" data-category="web">
+            <h3>Web Design & Development</h3>
+            <p>Responsive websites, landing pages, Webflow / WordPress builds, performance optimization and ongoing maintenance.</p>
+            <ul class="bullets"><li>UI/UX</li><li>eCommerce</li><li>Hosting & updates</li></ul>
+            <a class="more" href="#contact">Build a Site</a>
+          </article>
+
+          <article class="service-card" data-category="video">
+            <h3>Video Production & Editing</h3>
+            <p>Promo videos, short social clips, reels, product explainer animations and motion design to grow engagement fast.</p>
+            <ul class="bullets"><li>Scripting</li><li>Editing</li><li>Motion graphics</li></ul>
+            <a class="more" href="#contact">Get Videos</a>
+          </article>
+
+          <article class="service-card" data-category="social">
+            <h3>Social Media Management</h3>
+            <p>Content calendars, community management, ad creatives, and growth strategies tailored to Sudanese platforms and audiences.</p>
+            <ul class="bullets"><li>Posting & scheduling</li><li>Ad creatives</li><li>Reporting</li></ul>
+            <a class="more" href="#contact">Manage My Socials</a>
+          </article>
+
+          <article class="service-card" data-category="growth">
+            <h3>Performance Marketing (Ads)</h3>
+            <p>Meta, Google, and TikTok ad campaigns — setup, optimization, and reporting to convert traffic into customers.</p>
+            <ul class="bullets"><li>Ad strategy</li><li>Conversion tracking</li><li>Retargeting</li></ul>
+            <a class="more" href="#contact">Run Ads</a>
+          </article>
+
+          <article class="service-card" data-category="growth">
+            <h3>SEO & Content</h3>
+            <p>SEO audits, keyword strategy, local SEO and blog content to increase discoverability and organic growth.</p>
+            <ul class="bullets"><li>On-page SEO</li><li>Local listings</li><li>Blog & copy</li></ul>
+            <a class="more" href="#contact">Improve SEO</a>
+          </article>
+
+          <article class="service-card" data-category="growth">
+            <h3>Email, CRM & Automations</h3>
+            <p>Set up Google Workspace, email marketing tools, CRM integration and automations to streamline lead flow and sales.</p>
+            <ul class="bullets"><li>Gmail Workspace</li><li>CRM setup</li><li>Automations</li></ul>
+            <a class="more" href="#contact">Automate</a>
+          </article>
+
+          <article class="service-card" data-category="branding">
+            <h3>Pitch Decks & Investor Design</h3>
+            <p>Polished pitch decks and investor one-pagers that present product, traction and financials clearly and beautifully.</p>
+            <ul class="bullets"><li>Slide design</li><li>Financial visuals</li><li>One-pagers</li></ul>
+            <a class="more" href="#contact">Pitch Perfect</a>
+          </article>
+
+          <article class="service-card" data-category="growth">
+            <h3>Launch Campaigns</h3>
+            <p>End-to-end launch plans: landing pages, countdowns, PR kit, and social push to achieve a high-impact debut.</p>
+            <ul class="bullets"><li>Campaign strategy</li><li>Launch creative</li><li>Tracking</li></ul>
+            <a class="more" href="#contact">Plan a Launch</a>
+          </article>
+
+          <article class="service-card" data-category="web">
+            <h3>Analytics & CRO</h3>
+            <p>Google Analytics setup, dashboarding, A/B testing and optimization to improve conversion rates and ROI.</p>
+            <ul class="bullets"><li>Dashboarding</li><li>Conversion tests</li><li>Reporting</li></ul>
+            <a class="more" href="#contact">Optimize</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section id="packages" class="section packages">
+      <div class="container">
+        <div class="section-head">
+          <h2>Packages & Pricing</h2>
+          <p>Select a starting point — everything can be customized.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="title">Starter</div>
+            <div class="price">99<span>/mo</span></div>
+            <ul class="list">
+              <li>Logo + basic brand kit</li>
+              <li>1-page website</li>
+              <li>5 social creatives / month</li>
+              <li>Email support</li>
             </ul>
+            <a class="btn" href="#contact">Choose Starter</a>
+          </div>
 
-            <div class="website-section">
-                <h4>Website Development</h4>
-                <ul>
-                    <li>Basic Website: <strong class="price">150,000 SDG</strong></li>
-                    <li>Advanced Website: <strong class="price">275,000 SDG</strong></li>
-                </ul>
+          <div class="pricing-card featured">
+            <div class="title">Growth</div>
+            <div class="price">349<span>/mo</span></div>
+            <ul class="list">
+              <li>Full branding</li>
+              <li>Multi-page website</li>
+              <li>12 posts & 4 videos / month</li>
+              <li>Ads management (extra)</li>
+            </ul>
+            <a class="btn primary" href="#contact">Choose Growth</a>
+          </div>
+
+          <div class="pricing-card">
+            <div class="title">Scale</div>
+            <div class="price">Custom</div>
+            <ul class="list">
+              <li>Retainer with dedicated team</li>
+              <li>SEO & ad strategy</li>
+              <li>Full analytics & CRO</li>
+              <li>Priority support</li>
+            </ul>
+            <a class="btn" href="#contact">Contact for Pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section portfolio">
+      <div class="container">
+        <div class="section-head">
+          <h2>Selected Work</h2>
+          <p>Real projects made with local businesses and startups (mock thumbnails for demo).</p>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+          <!-- sample items -->
+          <figure class="portfolio-item" data-title="Brand system for Nile Café" data-desc="Logo, signage, social templates" tabindex="0">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23dfefff'/><text x='50%' y='50%' font-size='20' text-anchor='middle' fill='%23666'>Nile Café — Brand</text></svg>" alt="Nile Café brand" />
+            <figcaption>Nile Café — Brand</figcaption>
+          </figure>
+
+          <figure class="portfolio-item" data-title="Ecommerce site for Kosa Market" data-desc="Design & Webflow build, payments" tabindex="0">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23ffeedd'/><text x='50%' y='50%' font-size='20' text-anchor='middle' fill='%23666'>Kosa Market — eCommerce</text></svg>" alt="Kosa Market ecommerce" />
+            <figcaption>Kosa Market — eCommerce</figcaption>
+          </figure>
+
+          <figure class="portfolio-item" data-title="Promo video for Sukar" data-desc="Product promo + short social edits" tabindex="0">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23f6ffe8'/><text x='50%' y='50%' font-size='20' text-anchor='middle' fill='%23666'>Sukar — Promo</text></svg>" alt="Sukar promo video" />
+            <figcaption>Sukar — Promo</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container about-grid">
+        <div>
+          <h2>About — Mohamed Fadlalla</h2>
+          <p>Hi — I'm Mohamed. I design brands, build websites, edit videos, and run successful social campaigns for Sudanese businesses. I combine local cultural understanding with modern digital workflows so startups get traction fast.</p>
+          <ul class="stats">
+            <li><strong class="counter" data-target="150">0</strong><span>Projects</span></li>
+            <li><strong class="counter" data-target="45">0</strong><span>Clients</span></li>
+            <li><strong class="counter" data-target="8">0</strong><span>Years Experience</span></li>
+          </ul>
+        </div>
+
+        <aside class="about-card">
+          <h3>Why work together?</h3>
+          <p>Local-first approach, end-to-end execution, and ongoing growth support. You get a partner who understands Sudanese audiences and the digital tools that scale.</p>
+          <a class="btn" href="#contact">Let's Talk</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact & Brief</h2>
+          <p>Share a quick brief and I'll propose next steps.</p>
+        </div>
+
+        <div class="contact-grid">
+          <form id="contactForm" class="contact-form" novalidate>
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" required placeholder="e.g. Amina Ahmed" />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+            <label for="company">Company (optional)</label>
+            <input id="company" name="company" type="text" placeholder="Company or brand name" />
+
+            <label for="services">Services of interest</label>
+            <select id="services" name="services" required>
+              <option value="">Select a service</option>
+              <option>Branding</option>
+              <option>Website</option>
+              <option>Video</option>
+              <option>Social Media</option>
+              <option>SEO & Ads</option>
+            </select>
+
+            <label for="message">Short brief</label>
+            <textarea id="message" name="message" rows="5" placeholder="What do you need? goals, budget, timeline..."></textarea>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Send brief</button>
+              <button class="btn ghost" type="button" id="demoFill">Fill demo</button>
             </div>
 
-            <p class="summary-text">
-                👉 Packages stay under <strong>~270,000 SDG</strong> (without TikTok) or <strong>~380,000 SDG</strong> (with TikTok).
-            </p>
-        </section>
-    </main>
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+          </form>
 
-    <footer>
-        <p>&copy; Mohamed Fadalla - Services</p>
-    </footer>
+          <div class="contact-info">
+            <h3>Direct contact</h3>
+            <p><strong>Mohamed Fadlalla</strong></p>
+            <p>Email: <a href="mailto:hello@mohamedfadlalla.com">hello@mohamedfadlalla.com</a></p>
+            <p>Location: Sudan (remote work worldwide)</p>
 
-    <!-- Link to the JavaScript file -->
-    <script src="script.js"></script>
+            <h4>Quick services</h4>
+            <ul>
+              <li>Branding & identity</li>
+              <li>Website + hosting</li>
+              <li>Video editing & motion</li>
+              <li>Social management & ads</li>
+            </ul>
+
+            <div class="social-links">
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="LinkedIn">IN</a>
+              <a href="#" aria-label="YouTube">YT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mohamed Fadlalla — All rights reserved.</p>
+      <nav class="foot-nav" aria-label="Footer navigation">
+        <a href="#services">Services</a>
+        <a href="#packages">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Portfolio Modal -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="Portfolio item">
+    <div class="modal-panel" role="document">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div id="modalContent" class="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
