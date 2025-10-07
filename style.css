@@ -1,19 +1,122 @@
 /* style.css */
 
-/* Simple reset for testing */
+/* --- Base Styling --- */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f8f8;
     color: #333;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
-/* A simple style to confirm the CSS file is linked */
+header {
+    padding: 20px 0;
+    background-color: #fff;
+    border-bottom: 3px solid #007bff;
+}
+
 h1 {
-    color: green; /* This will be green if style.css is linked */
-    border-bottom: 2px solid green;
-    display: inline-block;
+    color: #007bff; /* Primary Color for Name */
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #555;
+    font-weight: 300;
+}
+
+/* --- Main Content & Pricing Styling --- */
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.intro {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 40px;
+    color: #777;
+}
+
+#pricing h3 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
     padding-bottom: 10px;
+}
+
+/* List Structure for Services */
+.service-list, .website-section ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.service-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px dashed #ddd;
+    font-size: 1.1em;
+}
+
+.service-list li:last-child {
+    border-bottom: none;
+}
+
+.service-name {
+    font-weight: 500;
+}
+
+.price {
+    font-weight: bold;
+    color: #28a745; /* Green for pricing */
+    min-width: 150px;
+    text-align: right;
+}
+
+.add-on {
+    color: #ffc107; /* Yellow/Orange for add-ons */
+}
+
+/* Website Section Styling */
+.website-section h4 {
+    color: #555;
+    margin-top: 0;
+    padding-left: 10px;
+}
+.website-section ul li {
+    padding: 8px 10px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Summary Text */
+.summary-text {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #e9f7ff;
+    border: 1px solid #cce5ff;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9em;
 }
