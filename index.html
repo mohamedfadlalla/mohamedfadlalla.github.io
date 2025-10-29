@@ -1,221 +1,265 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mohamed Fadlalla — Creative & Digital Agency</title>
-  <meta name="description" content="Mohamed Fadlalla — Branding, Design, Video, Web Development & Social Media Management for Sudanese businesses." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohamed Fadlalla Creative Studio — خدمات تصميم وتسويق رقمي</title>
+  <meta name="description" content="خدمات تصميم شعار، مواقع، محتوى سوشيال ميديا، وإدارة حضور رقمي بأسعار مناسبة للسوق السوداني." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <style>
+    /* Reset & base */
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --accent:#f59e0b; /* amber */
+      --muted:#9aa7b2;
+      --glass: rgba(255,255,255,0.03);
+      --maxw:1100px;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#02101a 0%, #071426 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:32px 16px;
+    }
+    .container{max-width:var(--maxw);margin:0 auto}
+
+    /* Header */
+    header{
+      display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:28px;
+    }
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ffb86b);display:grid;place-items:center;font-weight:700;color:#071426;font-size:18px;box-shadow:0 6px 20px rgba(0,0,0,0.45)
+    }
+    .brand h1{margin:0;font-size:18px}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+
+    nav{display:flex;gap:12px;align-items:center}
+    .btn{background:var(--accent);color:#071426;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 12px;border-radius:10px;color:var(--muted);text-decoration:none}
+
+    /* Hero */
+    .hero{
+      display:flex;gap:28px;align-items:center;padding:26px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.6);margin-bottom:26px;
+      flex-wrap:wrap;
+    }
+    .hero-left{flex:1;min-width:260px}
+    .hero-right{width:340px;min-width:260px}
+    h2{font-size:28px;margin:0 0 10px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .features{display:flex;gap:10px;flex-wrap:wrap}
+    .chip{background:var(--glass);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.03);font-weight:600}
+
+    /* Services grid */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .card h3{margin:0 0 8px}
+    .muted{color:var(--muted);font-size:13px}
+
+    /* Packages */
+    .packages{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
+    .pkg{background:#071426;padding:16px;border-radius:12px;flex:1;min-width:200px;border:1px solid rgba(255,255,255,0.03)}
+    .pkg h4{margin:0 0 8px}
+    .price{font-weight:800;color:var(--accent);font-size:18px}
+
+    /* Portfolio */
+    .portfolio{margin-top:26px}
+    .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .work{border-radius:10px;overflow:hidden;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px}
+    .work img{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+
+    /* Contact */
+    .contact{margin-top:26px;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px;display:flex;gap:16px;align-items:center;justify-content:space-between}
+    .contact .left{flex:1}
+    .contact .right{display:flex;gap:8px}
+
+    footer{margin-top:34px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .work-grid{grid-template-columns:repeat(2,1fr)}
+      .hero-right{width:100%}
+    }
+    @media (max-width:640px){
+      header{flex-direction:column;align-items:flex-start}
+      .grid{grid-template-columns:1fr}
+      .work-grid{grid-template-columns:1fr}
+      .packages{flex-direction:column}
+      .hero{flex-direction:column}
+    }
+
+    /* small helpers */
+    .small{font-size:13px;color:var(--muted)}
+    .cta-row{display:flex;gap:10px;align-items:center}
+    .phone{background:rgba(255,255,255,0.04);padding:8px 12px;border-radius:10px}
+
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#contact">Mohamed <span>Fadlalla</span></a>
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">
-        <span class="hamburger"></span>
-      </button>
-      <nav id="mainNav" class="main-nav" aria-label="Main Navigation">
-        <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#packages">Packages</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact" class="cta">Get Started</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h1>Mohamed Fadlalla — Digital solutions for Sudanese businesses</h1>
-          <p class="lead">Branding, websites, video, and social media — helping startups launch and grow online.</p>
-          <div class="hero-ctas">
-            <a class="btn primary" href="#services">View Services</a>
-            <a class="btn ghost" href="#contact">Get Started</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="section services">
-      <div class="container">
-        <div class="section-head">
-          <h2>Services — everything a startup needs</h2>
-          <p>From identity to growth: core creative services plus business essentials that startups and local businesses always need.</p>
-        </div>
-
-        <div class="service-filters" role="tablist" aria-label="Filter services">
-          <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="branding">Branding</button>
-          <button class="filter" data-filter="web">Web</button>
-          <button class="filter" data-filter="video">Video</button>
-          <button class="filter" data-filter="social">Social</button>
-          <button class="filter" data-filter="growth">Growth</button>
-        </div>
-
-        <div class="services-grid" id="servicesGrid">
-          <!-- Card template repeated with category data-category -->
-          <article class="service-card" data-category="branding">
-            <h3>Brand Strategy & Identity</h3>
-            <p>Full brand discovery, logo, visual system, brand book, tone of voice and messaging that resonates with local audiences.</p>
-            <ul class="bullets"><li>Workshops</li><li>Logo & marks</li><li>Brand guidelines</li></ul>
-            <a class="more" href="#contact">Start Branding</a>
-          </article>
-
-          <article class="service-card" data-category="web">
-            <h3>Web Design & Development</h3>
-            <p>Responsive websites, landing pages, Webflow / WordPress builds, performance optimization and ongoing maintenance.</p>
-            <ul class="bullets"><li>UI/UX</li><li>eCommerce</li><li>Hosting & updates</li></ul>
-            <a class="more" href="#contact">Build a Site</a>
-          </article>
-
-          <article class="service-card" data-category="video">
-            <h3>Video Production & Editing</h3>
-            <p>Promo videos, short social clips, reels, product explainer animations and motion design to grow engagement fast.</p>
-            <ul class="bullets"><li>Scripting</li><li>Editing</li><li>Motion graphics</li></ul>
-            <a class="more" href="#contact">Get Videos</a>
-          </article>
-
-          <article class="service-card" data-category="social">
-            <h3>Social Media Management</h3>
-            <p>Content calendars, community management, ad creatives, and growth strategies tailored to Sudanese platforms and audiences.</p>
-            <ul class="bullets"><li>Posting & scheduling</li><li>Ad creatives</li><li>Reporting</li></ul>
-            <a class="more" href="#contact">Manage My Socials</a>
-          </article>
-
-          <article class="service-card" data-category="growth">
-            <h3>Performance Marketing (Ads)</h3>
-            <p>Meta, Google, and TikTok ad campaigns — setup, optimization, and reporting to convert traffic into customers.</p>
-            <ul class="bullets"><li>Ad strategy</li><li>Conversion tracking</li><li>Retargeting</li></ul>
-            <a class="more" href="#contact">Run Ads</a>
-          </article>
-
-
-        </div>
-      </div>
-    </section>
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="section portfolio">
-      <div class="container">
-        <div class="section-head">
-          <h2>Selected Work</h2>
-          <p>Real projects made with local businesses and startups (mock thumbnails for demo).</p>
-        </div>
-
-        <div class="portfolio-grid" id="portfolioGrid">
-          <!-- sample items -->
-          <figure class="portfolio-item" data-title="Brand system for Nile Café" data-desc="Logo, signage, social templates" tabindex="0">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23dfefff'/><text x='50%' y='50%' font-size='20' text-anchor='middle' fill='%23666'>Nile Café — Brand</text></svg>" alt="Nile Café brand" />
-            <figcaption>Nile Café — Brand</figcaption>
-          </figure>
-
-          <figure class="portfolio-item" data-title="Ecommerce site for Kosa Market" data-desc="Design & Webflow build, payments" tabindex="0">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23ffeedd'/><text x='50%' y='50%' font-size='20' text-anchor='middle' fill='%23666'>Kosa Market — eCommerce</text></svg>" alt="Kosa Market ecommerce" />
-            <figcaption>Kosa Market — eCommerce</figcaption>
-          </figure>
-
-          <figure class="portfolio-item" data-title="Promo video for Sukar" data-desc="Product promo + short social edits" tabindex="0">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23f6ffe8'/><text x='50%' y='50%' font-size='20' text-anchor='middle' fill='%23666'>Sukar — Promo</text></svg>" alt="Sukar promo video" />
-            <figcaption>Sukar — Promo</figcaption>
-          </figure>
-
-          <figure class="portfolio-item" data-title="Biomedical MD Website" data-desc="Medical website design and development" tabindex="0">
-            <a href="https://biomedicalmd.online" target="_blank" rel="noopener">
-              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23e8f4fd'/><text x='50%' y='50%' font-size='18' text-anchor='middle' fill='%23666'>Biomedical MD</text></svg>" alt="Biomedical MD website" />
-            </a>
-            <figcaption><a href="https://biomedicalmd.online" target="_blank" rel="noopener">Biomedical MD</a></figcaption>
-          </figure>
-
-          <figure class="portfolio-item" data-title="Adil Hamid Portfolio" data-desc="Personal portfolio website" tabindex="0">
-            <a href="https://adilhamid.uk" target="_blank" rel="noopener">
-              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23fde8e8'/><text x='50%' y='50%' font-size='18' text-anchor='middle' fill='%23666'>Adil Hamid</text></svg>" alt="Adil Hamid portfolio" />
-            </a>
-            <figcaption><a href="https://adilhamid.uk" target="_blank" rel="noopener">Adil Hamid</a></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section about">
-      <div class="container about-grid">
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">MF</div>
         <div>
-          <h2>About — Mohamed Fadlalla</h2>
-          <p>Hi — I'm Mohamed. I design brands, build websites, edit videos, and run successful social campaigns for Sudanese businesses. I combine local cultural understanding with modern digital workflows so startups get traction fast.</p>
-          <ul class="stats">
-            <li><strong class="counter" data-target="150">0</strong><span>Projects</span></li>
-            <li><strong class="counter" data-target="45">0</strong><span>Clients</span></li>
-            <li><strong class="counter" data-target="8">0</strong><span>Years Experience</span></li>
-          </ul>
+          <h1>Mohamed Fadlalla Creative Studio</h1>
+          <p class="small">Professional design • Websites • Social content</p>
         </div>
-
-        <aside class="about-card">
-          <h3>Why work together?</h3>
-          <p>Local-first approach, end-to-end execution, and ongoing growth support. You get a partner who understands Sudanese audiences and the digital tools that scale.</p>
-          <a class="btn" href="#contact">Let's Talk</a>
-        </aside>
       </div>
-    </section>
+      <nav>
+        <a class="ghost" href="#services">الخدمات</a>
+        <a class="ghost" href="#packages">الباقات</a>
+        <a class="ghost" href="#portfolio">أعمالنا</a>
+        <a class="btn" href="https://wa.me/249129438898" target="_blank" rel="noopener">تواصل عبر واتساب</a>
+      </nav>
+    </header>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section contact">
-      <div class="container">
-        <div class="section-head">
-          <h2>Contact & Brief</h2>
-          <p>Share a quick brief and I'll propose next steps.</p>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <h2 id="hero-title">هل سيرتك الرقمية تعكس جودة عملك؟</h2>
+        <p class="lead">أنا بقدم حلول تصميم وتسويق رقمية كاملة ومعدّة خصيصاً للسوق السوداني — مواقع، شعارات، محتوى سوشيال، وفيديوهات قصيرة بأسعار منافسة.</p>
+
+        <div class="features">
+          <span class="chip">سعر مناسب</span>
+          <span class="chip">تسليم سريع</span>
+          <span class="chip">دعم واتساب</span>
+          <span class="chip">باكجات جاهزة</span>
         </div>
 
-        <div class="contact-grid">
+        <div style="margin-top:18px" class="cta-row">
+          <a class="btn" href="https://wa.me/249129438898" target="_blank" rel="noopener">ابدأ الآن — واتساب</a>
+          <a class="ghost" href="#packages">اطلع على الباقات</a>
+        </div>
 
-          <div class="contact-info">
-            <h3>Direct contact</h3>
-            <p><strong>Mohamed Fadlalla</strong></p>
-            <p>WhatsApp: <a href="https://wa.me/249967965493">+249 96 796 5493</a></p>
-            <p>Phone: <a href="tel:+249129438988">+249 12 943 8898</a></p>
-            <p>Email: <a href="mailto:mohamedbadrelmaarif@gmail.com">mohamedbadrelmaarif@gmail.com</a></p>
-            <p>Location: Sudan (remote work worldwide)</p>
+        <p class="small" style="margin-top:12px">أو تصفح الموقع للتفاصيل: <a href="https://mohamedfadlalla.github.io/" target="_blank" style="color:var(--accent);text-decoration:none">mohamedfadlalla.github.io</a></p>
+      </div>
 
-            <h4>Quick services</h4>
-            <ul>
-              <li>Branding & identity</li>
-              <li>Website + hosting</li>
-              <li>Video editing & motion</li>
-              <li>Social management & ads</li>
-            </ul>
+      <aside class="hero-right">
+        <div class="card">
+          <h3>خدمة سريعة: تجهيز سيرة ذاتية أو صفحة أعمال</h3>
+          <p class="muted">تحويل الهوية إلى ملف احترافي مناسب للتقديم على الوظائف أو عرض الخدمات عبر السوشيال ميديا.</p>
+          <div style="margin-top:12px" class="small">سعر خاص لفترة محدودة — راسلنا الآن.</div>
+        </div>
 
-            <div class="social-links">
-              <a href="#" aria-label="Instagram">IG</a>
-              <a href="#" aria-label="LinkedIn">IN</a>
-              <a href="#" aria-label="YouTube">YT</a>
-            </div>
+        <div style="margin-top:12px" class="card">
+          <h3>اتفاق سريع عبر واتساب</h3>
+          <p class="small">مكالمة تعريفية سريعة (10-15 دقيقة) ونحدد متطلبات المشروع مع خطة تنفيذ واضحة.</p>
+          <div style="margin-top:12px" class="cta-row">
+            <a class="btn" href="https://wa.me/249129438898" target="_blank" rel="noopener">اتصل أو اكتب</a>
+            <a class="ghost" href="#contact">معلومات التواصل</a>
           </div>
         </div>
+      </aside>
+    </section>
+
+    <section id="services" class="grid">
+      <div class="card">
+        <h3>تصميم مواقع</h3>
+        <p class="muted">مواقع سريعة، متجاوبة، ومهيأة للعرض على الموبايل. متوافقة تماماً مع متطلبات الأعمال الصغيرة والمتوسطة.</p>
+      </div>
+      <div class="card">
+        <h3>هوية بصرية وشعار</h3>
+        <p class="muted">شعار احترافي ودليل هوية بسيط يساعدك على الحفاظ على اتساق العلامة التجارية.</p>
+      </div>
+      <div class="card">
+        <h3>محتوى السوشيال</h3>
+        <p class="muted">بوستات ثابتة، فيديوهات قصيرة (Reels/TikTok)، وتصميمات قابلة للنشر مباشرة.</p>
+      </div>
+
+      <div class="card">
+        <h3>إدارة حسابات</h3>
+        <p class="muted">خطط شهرية لإدارة المحتوى، التفاعل، وتحليل الأداء.</p>
+      </div>
+      <div class="card">
+        <h3>تحرير فيديو</h3>
+        <p class="muted">مونتاج احترافي مناسب لتيك توك وفيسبوك — قصير، جذاب، ومُهيأ للنشر.</p>
+      </div>
+      <div class="card">
+        <h3>إعداد البريد المؤسسي</h3>
+        <p class="muted">نصّب سيرفر بريد احترافي لعملك (جيميل للأعمال / إعداد DNS / أمان).</p>
       </div>
     </section>
 
-  </main>
+    <section id="packages" class="packages">
+      <div class="pkg">
+        <h4>البداية — Starter</h4>
+        <p class="muted">للمشروعات الصغيرة والافراد</p>
+        <div class="price">200,000 SDG</div>
+        <ul class="small">
+          <li>شعار + 3 صفحات موقع</li>
+          <li>5 بوستات للسوشيال</li>
+        </ul>
+      </div>
+      <div class="pkg">
+        <h4>نمو الأعمال — Growth</h4>
+        <p class="muted">الحل للأعمال المتنامية</p>
+        <div class="price">350,000 SDG</div>
+        <ul class="small">
+          <li>هوية كاملة</li>
+          <li>5 صفحات موقع + 10 بوستات</li>
+          <li>2 فيديو قصير</li>
+        </ul>
+      </div>
+      <div class="pkg">
+        <h4>الحضور الكامل — Complete</h4>
+        <p class="muted">لمن يريد حضور قوي ومتكامل على الانترنت</p>
+        <div class="price">500,000 SDG</div>
+        <ul class="small">
+          <li>موقع متكامل</li>
+          <li>هوية + 20 بوست + 5 فيديو</li>
+          <li>إعداد بريد مؤسسي</li>
+        </ul>
+      </div>
+    </section>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Mohamed Fadlalla — All rights reserved.</p>
-    </div>
-  </footer>
+    <!-- <section id="portfolio" class="portfolio">
+      <h3 style="margin:0 0 12px">أعمال مختارة</h3>
+      <div class="work-grid">
+        <div class="work">
+          <img src="https://picsum.photos/seed/1/800/600" alt="عمل 1">
+          <strong>مشروع محل قهوة</strong>
+          <div class="muted small">شعار، موقع صفحة واحدة، 5 بوستات</div>
+        </div>
+        <div class="work">
+          <img src="https://picsum.photos/seed/2/800/600" alt="عمل 2">
+          <strong>عيادة خاصة</strong>
+          <div class="muted small">هوية رقمية وموقع حجوزات</div>
+        </div>
+        <div class="work">
+          <img src="https://picsum.photos/seed/3/800/600" alt="عمل 3">
+          <strong>متجر أونلاين</strong>
+          <div class="muted small">تصميم صفحة منتجات وتهيئة للـ SEO</div>
+        </div>
+      </div>
+    </section> -->
 
-  <!-- Portfolio Modal -->
-  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="Portfolio item">
-    <div class="modal-panel" role="document">
-      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-      <div id="modalContent" class="modal-content"></div>
-    </div>
+    <section id="contact" class="contact">
+      <div class="left">
+        <h3 style="margin:0">جاهز تبدأ؟</h3>
+        <p class="small muted">أرسل رسالة أو اتصل عبر واتساب وسنرد خلال ساعات العمل.</p>
+      </div>
+      <div class="right">
+        <a class="btn" href="https://wa.me/249129438898" target="_blank" rel="noopener">Write on WhatsApp</a>
+        <a class="ghost phone" href="tel:+249129438898">+249 129 438 898</a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Mohamed Fadlalla Creative Studio — All rights reserved • <a href="https://mohamedfadlalla.github.io/" style="color:var(--accent);text-decoration:none">Visit site</a>
+    </footer>
   </div>
 
-  <script src="script.js" defer></script>
+  <script>
+    // small script: update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
