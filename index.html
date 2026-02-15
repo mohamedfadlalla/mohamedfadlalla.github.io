@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -741,8 +741,47 @@
         padding: var(--space-1) var(--space-2);
       }
 
+      .mobile-menu-toggle {
+        display: flex !important;
+      }
+
       .nav {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--md-sys-color-surface-container-low);
+        flex-direction: column;
+        padding: var(--space-2);
+        border-bottom: 1px solid var(--md-sys-color-surface-variant);
+        gap: var(--space-1);
+      }
+
+      .nav.active {
+        display: flex;
+      }
+
+      .nav .nav-link,
+      .nav .btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      [dir="rtl"] .nav .nav-link,
+      [dir="rtl"] .nav .btn {
+        text-align: center;
+      }
+
+      .brand-text {
+        display: none;
+      }
+
+      .logo {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
       }
 
       .hero {
@@ -753,13 +792,30 @@
         padding: var(--space-6) 0;
       }
 
-      .packages-grid {
-        grid-template-columns: 1fr;
+      .hero-cards {
+        gap: var(--space-2);
+      }
+
+      .hero-card {
+        padding: var(--space-2);
+      }
+
+      .hero-card h3 {
+        font-size: 1rem;
+      }
+
+      .hero-card p {
+        font-size: 0.8rem;
       }
 
       .cta-buttons {
         flex-direction: column;
         align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
       }
 
       .contact-actions {
@@ -772,8 +828,67 @@
       }
 
       .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-2);
+      }
+
+      .stat-number {
+        font-size: 1.75rem;
+      }
+
+      .services-grid {
         grid-template-columns: 1fr;
-        gap: var(--space-3);
+      }
+
+      .testimonials {
+        padding: var(--space-3);
+      }
+
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-header h2 {
+        font-size: 1.5rem;
+      }
+
+      .section-header p {
+        font-size: 0.9rem;
+      }
+
+      .features {
+        gap: var(--space-0-5);
+      }
+
+      .chip {
+        font-size: 0.65rem;
+        padding: var(--space-0-5) var(--space-1);
+      }
+
+      .display-large {
+        font-size: 1.75rem;
+      }
+
+      .hero-text p {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .brand-text {
+        display: none;
+      }
+
+      .header-content {
+        justify-content: space-between;
+      }
+
+      .stat-item {
+        padding: var(--space-1);
+      }
+
+      .stat-number {
+        font-size: 1.5rem;
       }
     }
 
@@ -811,7 +926,64 @@
       pointer-events: none;
     }
 
-@font-face {
+    /* Language Toggle */
+    .lang-toggle {
+      font-size: 0.75rem !important;
+      padding: var(--space-1) var(--space-1-5) !important;
+    }
+
+    .lang-toggle .material-symbols-outlined {
+      font-size: 16px !important;
+    }
+
+    /* RTL Support */
+    [dir="rtl"] .nav {
+      flex-direction: row-reverse;
+    }
+
+    [dir="rtl"] .hero-content {
+      direction: rtl;
+    }
+
+    [dir="rtl"] .cta-buttons {
+      flex-direction: row-reverse;
+    }
+
+    [dir="rtl"] .service-header {
+      flex-direction: row-reverse;
+    }
+
+    [dir="rtl"] .package-header {
+      flex-direction: row-reverse;
+    }
+
+    [dir="rtl"] .package-features li {
+      flex-direction: row-reverse;
+    }
+
+    [dir="rtl"] .feature-check {
+      margin-left: 0;
+      margin-right: var(--space-1);
+    }
+
+    [dir="rtl"] .contact {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    [dir="rtl"] .header-content {
+      flex-direction: row-reverse;
+    }
+
+    [dir="rtl"] .brand {
+      flex-direction: row-reverse;
+    }
+
+    [dir="rtl"] .brand-text {
+      text-align: right;
+    }
+
+    @font-face {
   font-family: 'Material Symbols Outlined';
   font-style: normal;
   font-weight: 400;
@@ -866,13 +1038,19 @@
             <p>Professional design • Websites • Social content</p>
           </div>
         </div>
-        <nav class="nav">
-          <a href="#services" class="nav-link">الخدمات</a>
-          <a href="#packages" class="nav-link">الباقات</a>
-          <a href="#testimonials" class="nav-link">آراء العملاء</a>
+        <button id="mobileMenuToggle" class="btn btn-ghost mobile-menu-toggle" aria-label="Toggle menu" style="display: none;">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+        <nav class="nav" id="mainNav">
+          <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
+          <a href="#testimonials" class="nav-link" data-i18n="nav_testimonials">Testimonials</a>
+          <button id="langToggle" class="btn btn-ghost lang-toggle" aria-label="Switch language">
+            <span class="material-symbols-outlined" style="font-size: 18px;">translate</span>
+            <span data-i18n="lang_label">العربية</span>
+          </button>
           <a href="https://wa.me/249129438898" target="_blank" rel="noopener" class="btn btn-primary">
             <span class="material-symbols-outlined">chat</span>
-            تواصل عبر واتساب
+            <span data-i18n="nav_whatsapp">WhatsApp</span>
           </a>
         </nav>
       </div>
@@ -884,25 +1062,25 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <h1 class="display-large">هل سيرتك الرقمية تعكس جودة عملك؟</h1>
-          <p class="body-large">أنا بقدم حلول تصميم وتسويق رقمية كاملة ومعدّة خصيصاً للسوق السوداني — مواقع، شعارات، محتوى سوشيال، وفيديوهات قصيرة بأسعار منافسة.</p>
+          <h1 class="display-large" data-i18n="hero_title">Does your digital presence reflect your business quality?</h1>
+          <p class="body-large" data-i18n="hero_subtitle">I provide complete design and digital marketing solutions tailored for the Sudanese market — websites, logos, social content, and short videos at competitive prices.</p>
 
           <div class="features">
-            <span class="chip">سعر مناسب</span>
-            <span class="chip">تسليم سريع</span>
-            <span class="chip">دعم واتساب</span>
-            <span class="chip">باكجات جاهزة</span>
-            <span class="chip">ضمان الجودة</span>
+            <span class="chip" data-i18n="chip1">Affordable Price</span>
+            <span class="chip" data-i18n="chip2">Fast Delivery</span>
+            <span class="chip" data-i18n="chip3">WhatsApp Support</span>
+            <span class="chip" data-i18n="chip4">Ready Packages</span>
+            <span class="chip" data-i18n="chip5">Quality Guaranteed</span>
           </div>
 
           <div class="cta-buttons">
             <a href="https://wa.me/249129438898" target="_blank" rel="noopener" class="btn btn-primary">
               <span class="material-symbols-outlined">rocket_launch</span>
-              ابدأ الآن — واتساب
+              <span data-i18n="cta_start">Get Started — WhatsApp</span>
             </a>
-            <a href="#packages" class="btn btn-secondary">
+            <a href="#services" class="btn btn-secondary">
               <span class="material-symbols-outlined">visibility</span>
-              اطلع على الباقات
+              <span data-i18n="cta_services">View Services</span>
             </a>
           </div>
         </div>
@@ -911,25 +1089,25 @@
           <div class="hero-card">
             <h3>
               <span class="material-symbols-outlined card-icon">bolt</span>
-              خدمة سريعة: تجهيز سيرة ذاتية أو صفحة أعمال
+              <span data-i18n="hero_card1_title">Quick Service: CV or Portfolio Setup</span>
             </h3>
-            <p class="body-medium">تحويل الهوية إلى ملف احترافي مناسب للتقديم على الوظائف أو عرض الخدمات عبر السوشيال ميديا.</p>
-            <p class="body-medium" style="margin-top: var(--space-1); color: var(--md-sys-color-primary); font-weight: 600;">سعر خاص لفترة محدودة — راسلنا الآن</p>
+            <p class="body-medium" data-i18n="hero_card1_desc">Transform your identity into a professional file suitable for job applications or showcasing services on social media.</p>
+            <p class="body-medium" style="margin-top: var(--space-1); color: var(--md-sys-color-primary); font-weight: 600;" data-i18n="hero_card1_cta">Special price for limited time — Contact us now</p>
           </div>
 
           <div class="hero-card">
             <h3>
               <span class="material-symbols-outlined card-icon">forum</span>
-              اتفاق سريع عبر واتساب
+              <span data-i18n="hero_card2_title">Quick Agreement via WhatsApp</span>
             </h3>
-            <p class="body-medium">مكالمة تعريفية سريعة (10-15 دقيقة) ونحدد متطلبات المشروع مع خطة تنفيذ واضحة.</p>
+            <p class="body-medium" data-i18n="hero_card2_desc">A quick introductory call (10-15 minutes) to define project requirements with a clear execution plan.</p>
             <div class="cta-buttons" style="margin-top: var(--space-2);">
               <a href="https://wa.me/249129438898" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 0.8rem; padding: var(--space-1) var(--space-2);">
                 <span class="material-symbols-outlined" style="font-size: 16px;">call</span>
-                اتصل أو اكتب
+                <span data-i18n="hero_card2_btn1">Call or Message</span>
               </a>
               <a href="#contact" class="btn btn-ghost" style="font-size: 0.8rem; padding: var(--space-1) var(--space-2);">
-                معلومات التواصل
+                <span data-i18n="hero_card2_btn2">Contact Info</span>
               </a>
             </div>
           </div>
@@ -945,19 +1123,19 @@
         <div class="stats-grid">
           <div class="stat-item">
             <span class="stat-number">50+</span>
-            <span class="stat-label">مشروع مكتمل</span>
+            <span class="stat-label" data-i18n="stat1">Projects Completed</span>
           </div>
           <div class="stat-item">
             <span class="stat-number">30+</span>
-            <span class="stat-label">عميل راضي</span>
+            <span class="stat-label" data-i18n="stat2">Satisfied Clients</span>
           </div>
           <div class="stat-item">
-            <span class="stat-number">24س</span>
-            <span class="stat-label">متوسط وقت الاستجابة</span>
+            <span class="stat-number">24h</span>
+            <span class="stat-label" data-i18n="stat3">Avg. Response Time</span>
           </div>
           <div class="stat-item">
             <span class="stat-number">100%</span>
-            <span class="stat-label">ضمان الجودة</span>
+            <span class="stat-label" data-i18n="stat4">Quality Guarantee</span>
           </div>
         </div>
       </div>
@@ -968,8 +1146,8 @@
   <section id="services" class="section">
     <div class="container">
       <div class="section-header scroll-reveal">
-        <h2 class="headline-medium">خدماتنا المتميزة</h2>
-        <p>حلول شاملة لبناء حضورك الرقمي</p>
+        <h2 class="headline-medium" data-i18n="services_title">Our Premium Services</h2>
+        <p data-i18n="services_subtitle">Comprehensive solutions for building your digital presence</p>
       </div>
       <div class="services-grid">
         <div class="service-card scroll-reveal">
@@ -977,9 +1155,9 @@
             <div class="service-icon">
               <span class="material-symbols-outlined">language</span>
             </div>
-            <h3 class="title-large">تصميم مواقع</h3>
+            <h3 class="title-large" data-i18n="service1_title">Website Design</h3>
           </div>
-          <p class="body-medium">مواقع سريعة، متجاوبة، ومهيأة للعرض على الموبايل. متوافقة تماماً مع متطلبات الأعمال الصغيرة والمتوسطة.</p>
+          <p class="body-medium" data-i18n="service1_desc">Fast, responsive, and mobile-friendly websites. Fully compatible with small and medium business requirements.</p>
         </div>
 
         <div class="service-card scroll-reveal">
@@ -987,9 +1165,9 @@
             <div class="service-icon">
               <span class="material-symbols-outlined">palette</span>
             </div>
-            <h3 class="title-large">هوية بصرية وشعار</h3>
+            <h3 class="title-large" data-i18n="service2_title">Visual Identity & Logo</h3>
           </div>
-          <p class="body-medium">شعار احترافي ودليل هوية بسيط يساعدك على الحفاظ على اتساق العلامة التجارية.</p>
+          <p class="body-medium" data-i18n="service2_desc">Professional logo and simple identity guide to help maintain brand consistency.</p>
         </div>
 
         <div class="service-card scroll-reveal">
@@ -997,9 +1175,9 @@
             <div class="service-icon">
               <span class="material-symbols-outlined">share</span>
             </div>
-            <h3 class="title-large">محتوى السوشيال</h3>
+            <h3 class="title-large" data-i18n="service3_title">Social Media Content</h3>
           </div>
-          <p class="body-medium">بوستات ثابتة، فيديوهات قصيرة (Reels/TikTok)، وتصميمات قابلة للنشر مباشرة.</p>
+          <p class="body-medium" data-i18n="service3_desc">Static posts, short videos (Reels/TikTok), and designs ready for immediate publishing.</p>
         </div>
 
         <div class="service-card scroll-reveal">
@@ -1007,9 +1185,9 @@
             <div class="service-icon">
               <span class="material-symbols-outlined">manage_accounts</span>
             </div>
-            <h3 class="title-large">إدارة حسابات</h3>
+            <h3 class="title-large" data-i18n="service4_title">Account Management</h3>
           </div>
-          <p class="body-medium">خطط شهرية لإدارة المحتوى، التفاعل، وتحليل الأداء.</p>
+          <p class="body-medium" data-i18n="service4_desc">Monthly plans for content management, engagement, and performance analysis.</p>
         </div>
 
         <div class="service-card scroll-reveal">
@@ -1017,9 +1195,9 @@
             <div class="service-icon">
               <span class="material-symbols-outlined">movie</span>
             </div>
-            <h3 class="title-large">تحرير فيديو</h3>
+            <h3 class="title-large" data-i18n="service5_title">Video Editing</h3>
           </div>
-          <p class="body-medium">مونتاج احترافي مناسب لتيك توك وفيسبوك — قصير، جذاب، ومُهيأ للنشر.</p>
+          <p class="body-medium" data-i18n="service5_desc">Professional editing suitable for TikTok and Facebook — short, engaging, and ready for publishing.</p>
         </div>
 
         <div class="service-card scroll-reveal">
@@ -1027,9 +1205,9 @@
             <div class="service-icon">
               <span class="material-symbols-outlined">email</span>
             </div>
-            <h3 class="title-large">إعداد البريد المؤسسي</h3>
+            <h3 class="title-large" data-i18n="service6_title">Business Email Setup</h3>
           </div>
-          <p class="body-medium">نصّب سيرفر بريد احترافي لعملك (جيميل للأعمال / إعداد DNS / أمان).</p>
+          <p class="body-medium" data-i18n="service6_desc">Set up a professional email server for your business (Google Workspace / DNS setup / security).</p>
         </div>
       </div>
     </div>
@@ -1039,106 +1217,25 @@
   <section id="testimonials" class="section">
     <div class="container">
       <div class="section-header scroll-reveal">
-        <h2 class="headline-medium">آراء عملائنا</h2>
-        <p>ماذا يقول عملاؤنا عن خدماتنا</p>
+        <h2 class="headline-medium" data-i18n="testimonials_title">Client Reviews</h2>
+        <p data-i18n="testimonials_subtitle">What our clients say about our services</p>
       </div>
       <div class="testimonials scroll-reveal">
         <div class="testimonial-grid">
           <div class="testimonial-card">
-            <p class="testimonial-text">"الموقع الجديد جعل ممارستي الطبية أكثر احترافية ووضوحاً. المرضى أصبحوا يفهمون خدماتي بشكل أفضل والتواصل معي أصبح أسهل. شكراً لك على العمل المتميز."</p>
+            <p class="testimonial-text">"The new website made my medical practice more professional and clear. Patients now understand my services better and contacting me has become easier. Thank you for the excellent work."</p>
             <div>
-              <div class="testimonial-author">د. مصعب علي</div>
-              <div class="testimonial-role">طبيب بيولوجي - biomedicalmd.online</div>
+              <div class="testimonial-author">Dr. Moaab Ali</div>
+              <div class="testimonial-role">Biologist - biomedicalmd.online</div>
             </div>
           </div>
           <div class="testimonial-card">
-            <p class="testimonial-text">"منذ أن صمم لي الموقع، أصبح كتبي وأفكاري تصل لجمهور أوسع. التصميم يعكس هويتي الفكرية بطريقة احترافية، والموقع سهل الاستخدام للباحثين عن أعمالتي."</p>
+            <p class="testimonial-text">"Since he designed the website for me, my books and ideas reached a wider audience. The design reflects my intellectual identity professionally, and the site is easy for those searching for my work."</p>
             <div>
-              <div class="testimonial-author">د. عادل حامد</div>
-              <div class="testimonial-role">كاتب وباحث - adilhamid.uk</div>
+              <div class="testimonial-author">Dr. Adel Hamed</div>
+              <div class="testimonial-role">Author & Researcher - adilhamid.uk</div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Packages Section -->
-  <section id="packages" class="section">
-    <div class="container">
-      <div class="section-header scroll-reveal">
-        <h2 class="headline-medium">باقاتنا المتدرجة</h2>
-        <p>اختر الباقة التي تناسب احتياجاتك</p>
-      </div>
-      <div class="packages-grid">
-        <div class="package-card scroll-reveal">
-          <h4>البداية — Starter</h4>
-          <p class="package-description">للمشروعات الصغيرة والافراد</p>
-          <div class="package-price">200,000 SDG</div>
-          <ul class="package-features">
-            <li>
-              <span class="material-symbols-outlined feature-check">check</span>
-              شعار + 3 صفحات موقع
-            </li>
-            <li>
-              <span class="material-symbols-outlined feature-check">check</span>
-              5 بوستات للسوشيال
-            </li>
-            <li>
-              <span class="material-symbols-outlined feature-check">check</span>
-              دعم فني لمدة شهر
-            </li>
-          </ul>
-          <a href="https://wa.me/249129438898?text=مرحبا، أريد باقة البداية" target="_blank" rel="noopener" class="btn btn-secondary" style="width: 100%; justify-content: center;">
-            اطلب الآن
-          </a>
-        </div>
-
-        <div class="package-card featured scroll-reveal">
-          
-          <h4>نمو الأعمال — Growth</h4>
-          <p class="package-description">الحل للأعمال المتنامية</p>
-          <div class="package-price">350,000 SDG</div>
-          <ul class="package-features">
-            <li>
-              <span class="material-symbols-outlined feature-check">check</span>
-              هوية كاملة
-            </li>
-            <li>
-              <span class="material-symbols-outlined feature-check">check</span>
-              5 صفحات موقع + 10 بوستات
-            </li>
-            <li>
-              <span class="material-symbols-outlined feature-check">check</span>
-              2 فيديو قصير
-            </li>
-          </ul>
-          <a href="https://wa.me/249129438898?text=مرحبا، أريد باقة نمو الأعمال" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; justify-content: center;">
-            اطلب الآن
-          </a>
-        </div>
-
-        <div class="package-card scroll-reveal">
-          <h4>الحضور الكامل — Complete</h4>
-          <p class="package-description">لمن يريد حضور قوي ومتكامل على الانترنت</p>
-          <div class="package-price">500,000 SDG</div>
-          <ul class="package-features">
-            <li>
-              <span class="material-symbols-outlined feature-check">check</span>
-              موقع متكامل
-            </li>
-            <li>
-              <span class="material-symbols-outlined feature-check">check</span>
-              هوية + 20 بوست + 5 فيديو
-            </li>
-            <li>
-              <span class="material-symbols-outlined feature-check">check</span>
-              شهر إدارة سوشيال ميديا
-            </li>
-          </ul>
-          <a href="https://wa.me/249129438898?text=مرحبا، أريد باقة الحضور الكامل" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; justify-content: center;">
-            اطلب الآن
-          </a>
         </div>
       </div>
     </div>
@@ -1149,13 +1246,13 @@
     <div class="container">
       <div class="contact scroll-reveal">
         <div class="contact-content">
-          <h3 class="headline-medium">جاهز تبدأ؟</h3>
-          <p class="body-large">أرسل رسالة أو اتصل عبر واتساب وسنرد خلال ساعات العمل.</p>
+          <h3 class="headline-medium" data-i18n="contact_title">Ready to start?</h3>
+          <p class="body-large" data-i18n="contact_subtitle">Send a message or call via WhatsApp and we'll respond during business hours.</p>
         </div>
         <div class="contact-actions">
           <a href="https://wa.me/249129438898" target="_blank" rel="noopener" class="btn btn-primary">
             <span class="material-symbols-outlined">chat</span>
-            Write on WhatsApp
+            <span data-i18n="contact_whatsapp">Write on WhatsApp</span>
           </a>
           <a href="tel:+249129438898" class="btn btn-secondary">
             <span class="material-symbols-outlined">call</span>
@@ -1176,6 +1273,144 @@
   </footer>
 
   <script>
+    // Bilingual Support
+    const translations = {
+      en: {
+        nav_services: "Services",
+        nav_testimonials: "Testimonials",
+        nav_whatsapp: "WhatsApp",
+        lang_label: "العربية",
+        hero_title: "Does your digital presence reflect your business quality?",
+        hero_subtitle: "I provide complete design and digital marketing solutions tailored for the Sudanese market — websites, logos, social content, and short videos at competitive prices.",
+        chip1: "Affordable Price",
+        chip2: "Fast Delivery",
+        chip3: "WhatsApp Support",
+        chip4: "Ready Packages",
+        chip5: "Quality Guaranteed",
+        cta_start: "Get Started — WhatsApp",
+        cta_services: "View Services",
+        hero_card1_title: "Quick Service: CV or Portfolio Setup",
+        hero_card1_desc: "Transform your identity into a professional file suitable for job applications or showcasing services on social media.",
+        hero_card1_cta: "Special price for limited time — Contact us now",
+        hero_card2_title: "Quick Agreement via WhatsApp",
+        hero_card2_desc: "A quick introductory call (10-15 minutes) to define project requirements with a clear execution plan.",
+        hero_card2_btn1: "Call or Message",
+        hero_card2_btn2: "Contact Info",
+        stat1: "Projects Completed",
+        stat2: "Satisfied Clients",
+        stat3: "Avg. Response Time",
+        stat4: "Quality Guarantee",
+        services_title: "Our Premium Services",
+        services_subtitle: "Comprehensive solutions for building your digital presence",
+        service1_title: "Website Design",
+        service1_desc: "Fast, responsive, and mobile-friendly websites. Fully compatible with small and medium business requirements.",
+        service2_title: "Visual Identity & Logo",
+        service2_desc: "Professional logo and simple identity guide to help maintain brand consistency.",
+        service3_title: "Social Media Content",
+        service3_desc: "Static posts, short videos (Reels/TikTok), and designs ready for immediate publishing.",
+        service4_title: "Account Management",
+        service4_desc: "Monthly plans for content management, engagement, and performance analysis.",
+        service5_title: "Video Editing",
+        service5_desc: "Professional editing suitable for TikTok and Facebook — short, engaging, and ready for publishing.",
+        service6_title: "Business Email Setup",
+        service6_desc: "Set up a professional email server for your business (Google Workspace / DNS setup / security).",
+        testimonials_title: "Client Reviews",
+        testimonials_subtitle: "What our clients say about our services",
+        contact_title: "Ready to start?",
+        contact_subtitle: "Send a message or call via WhatsApp and we'll respond during business hours.",
+        contact_whatsapp: "Write on WhatsApp"
+      },
+      ar: {
+        nav_services: "الخدمات",
+        nav_testimonials: "آراء العملاء",
+        nav_whatsapp: "تواصل عبر واتساب",
+        lang_label: "English",
+        hero_title: "هل سيرتك الرقمية تعكس جودة عملك؟",
+        hero_subtitle: "أنا بقدم حلول تصميم وتسويق رقمية كاملة ومعدّة خصيصاً للسوق السوداني — مواقع، شعارات، محتوى سوشيال، وفيديوهات قصيرة بأسعار منافسة.",
+        chip1: "سعر مناسب",
+        chip2: "تسليم سريع",
+        chip3: "دعم واتساب",
+        chip4: "باكجات جاهزة",
+        chip5: "ضمان الجودة",
+        cta_start: "ابدأ الآن — واتساب",
+        cta_services: "اطلع على الخدمات",
+        hero_card1_title: "خدمة سريعة: تجهيز سيرة ذاتية أو صفحة أعمال",
+        hero_card1_desc: "تحويل الهوية إلى ملف احترافي مناسب للتقديم على الوظائف أو عرض الخدمات عبر السوشيال ميديا.",
+        hero_card1_cta: "سعر خاص لفترة محدودة — راسلنا الآن",
+        hero_card2_title: "اتفاق سريع عبر واتساب",
+        hero_card2_desc: "مكالمة تعريفية سريعة (10-15 دقيقة) ونحدد متطلبات المشروع مع خطة تنفيذ واضحة.",
+        hero_card2_btn1: "اتصل أو اكتب",
+        hero_card2_btn2: "معلومات التواصل",
+        stat1: "مشروع مكتمل",
+        stat2: "عميل راضي",
+        stat3: "متوسط وقت الاستجابة",
+        stat4: "ضمان الجودة",
+        services_title: "خدماتنا المتميزة",
+        services_subtitle: "حلول شاملة لبناء حضورك الرقمي",
+        service1_title: "تصميم مواقع",
+        service1_desc: "مواقع سريعة، متجاوبة، ومهيأة للعرض على الموبايل. متوافقة تماماً مع متطلبات الأعمال الصغيرة والمتوسطة.",
+        service2_title: "هوية بصرية وشعار",
+        service2_desc: "شعار احترافي ودليل هوية بسيط يساعدك على الحفاظ على اتساق العلامة التجارية.",
+        service3_title: "محتوى السوشيال",
+        service3_desc: "بوستات ثابتة، فيديوهات قصيرة (Reels/TikTok)، وتصميمات قابلة للنشر مباشرة.",
+        service4_title: "إدارة حسابات",
+        service4_desc: "خطط شهرية لإدارة المحتوى، التفاعل، وتحليل الأداء.",
+        service5_title: "تحرير فيديو",
+        service5_desc: "مونتاج احترافي مناسب لتيك توك وفيسبوك — قصير، جذاب، ومُهيأ للنشر.",
+        service6_title: "إعداد البريد المؤسسي",
+        service6_desc: "نصّب سيرفر بريد احترافي لعملك (جيميل للأعمال / إعداد DNS / أمان).",
+        testimonials_title: "آراء عملائنا",
+        testimonials_subtitle: "ماذا يقول عملاؤنا عن خدماتنا",
+        contact_title: "جاهز تبدأ؟",
+        contact_subtitle: "أرسل رسالة أو اتصل عبر واتساب وسنرد خلال ساعات العمل.",
+        contact_whatsapp: "تواصل عبر واتساب"
+      }
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'en';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+      
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    }
+
+    document.getElementById('langToggle').addEventListener('click', () => {
+      const newLang = currentLang === 'en' ? 'ar' : 'en';
+      setLanguage(newLang);
+    });
+
+    setLanguage(currentLang);
+
+    // Mobile menu toggle
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mainNav = document.getElementById('mainNav');
+    
+    if (mobileMenuToggle && mainNav) {
+      mobileMenuToggle.addEventListener('click', () => {
+        const isActive = mainNav.classList.contains('active');
+        mainNav.classList.toggle('active');
+        mobileMenuToggle.querySelector('.material-symbols-outlined').textContent = isActive ? 'menu' : 'close';
+      });
+
+      // Close menu when clicking a link
+      mainNav.querySelectorAll('.nav-link, .btn').forEach(link => {
+        link.addEventListener('click', () => {
+          mainNav.classList.remove('active');
+          mobileMenuToggle.querySelector('.material-symbols-outlined').textContent = 'menu';
+        });
+      });
+    }
+
     // Update year
     document.getElementById('year').textContent = new Date().getFullYear();
 
