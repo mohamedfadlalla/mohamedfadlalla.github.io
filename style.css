@@ -1,4 +1,4 @@
-    /* Material Design 3 Color System */
+/* Material Design 3 Color System */
     :root {
       /* Primary Colors - Warm Amber */
       --md-sys-color-primary: #d4a574;
@@ -26,10 +26,6 @@
       --md-sys-color-surface-container: #1a1f27;
       --md-sys-color-surface-container-low: #151922;
       --md-sys-color-surface-container-lowest: #0b0f14;
-
-      /* Error Colors */
-      --md-sys-color-error: #ffb4ab;
-      --md-sys-color-on-error: #690005;
 
       /* Background */
       --md-sys-color-background: #0f1319;
@@ -145,13 +141,7 @@
       line-height: 1.5;
     }
 
-    .label-large {
-      font-family: var(--font-body);
-      font-size: 0.875rem;
-      font-weight: 500;
-      line-height: 1.4;
-      letter-spacing: 0.01em;
-    }
+    
 
     /* Header */
     .header {
@@ -487,94 +477,6 @@
     .service-card p {
       color: var(--md-sys-color-on-surface-variant);
       line-height: 1.6;
-    }
-
-    /* Packages */
-    .packages {
-      margin-top: var(--space-6);
-    }
-
-    .packages-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: var(--space-3);
-      margin-top: var(--space-4);
-    }
-
-    .package-card {
-      background: var(--md-sys-color-surface-container);
-      border-radius: var(--radius-large);
-      padding: var(--space-4);
-      border: 2px solid transparent;
-      transition: all var(--motion-standard) 200ms;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .package-card.featured {
-      border-color: var(--md-sys-color-primary);
-      transform: scale(1.02);
-    }
-
-    .package-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--elevation-4);
-    }
-
-    .package-card.featured:hover {
-      transform: scale(1.02) translateY(-8px);
-    }
-
-    .package-badge {
-      position: absolute;
-      top: var(--space-2);
-      right: var(--space-2);
-      background: var(--md-sys-color-primary);
-      color: var(--md-sys-color-on-primary);
-      padding: var(--space-0-5) var(--space-1);
-      border-radius: var(--radius-large);
-      font-size: 0.75rem;
-      font-weight: 600;
-    }
-
-    .package-card h4 {
-      color: var(--md-sys-color-on-surface);
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: var(--space-1);
-    }
-
-    .package-description {
-      color: var(--md-sys-color-on-surface-variant);
-      margin-bottom: var(--space-3);
-    }
-
-    .package-price {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--md-sys-color-primary);
-      margin-bottom: var(--space-2);
-    }
-
-    .package-features {
-      list-style: none;
-      margin-bottom: var(--space-3);
-    }
-
-    .package-features li {
-      display: flex;
-      align-items: center;
-      gap: var(--space-1);
-      color: var(--md-sys-color-on-surface-variant);
-      margin-bottom: var(--space-1);
-    }
-
-    .feature-check {
-      color: var(--md-sys-color-secondary);
-      width: 16px;
-      height: 16px;
-      font-size: 16px !important;
-      line-height: 1;
     }
 
     /* Testimonials */
@@ -954,46 +856,4 @@
 
     [dir="rtl"] .brand-text {
       text-align: right;
-    }
-
-    @font-face {
-  font-family: 'Material Symbols Outlined';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v126/kJF1BvFY7UDvl4EJJWkecHV7DQBaWJVQ.woff2) format('woff2');
-}
-
-.material-symbols-outlined {
-  font-family: 'Material Symbols Outlined' !important;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
-}
-
-    /* Material Ripple Effect */
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.3);
-      transform: translate(-50%, -50%);
-      transition: width 0.3s, height 0.3s;
-    }
-
-    .btn:active::before {
-      width: 100%;
-      height: 100%;
     }

@@ -1,4 +1,4 @@
-    // Bilingual Support
+// Bilingual Support
     const translations = {
       en: {
         nav_services: "Services",
@@ -191,88 +191,6 @@
       lastScrollTop = scrollTop;
     });
 
-    // Enhanced button click effects
-    document.querySelectorAll('.btn').forEach(button => {
-      button.addEventListener('click', function(e) {
-        // Create ripple effect
-        const ripple = document.createElement('span');
-        const rect = this.getBoundingClientRect();
-        const size = Math.max(rect.width, rect.height);
-        const x = e.clientX - rect.left - size / 2;
-        const y = e.clientY - rect.top - size / 2;
-        
-        ripple.style.width = ripple.style.height = size + 'px';
-        ripple.style.left = x + 'px';
-        ripple.style.top = y + 'px';
-        ripple.classList.add('ripple');
-        
-        this.appendChild(ripple);
-        
-        setTimeout(() => {
-          ripple.remove();
-        }, 600);
-      });
-    });
-
-    // Add loading state to external links
-    document.querySelectorAll('a[target="_blank"]').forEach(link => {
-      link.addEventListener('click', function() {
-        this.classList.add('loading');
-        setTimeout(() => {
-          this.classList.remove('loading');
-        }, 1000);
-      });
-    });
-
-    // Package card interactions
-    document.querySelectorAll('.package-card').forEach(card => {
-      card.addEventListener('mouseenter', function() {
-        this.style.transform = this.classList.contains('featured') ? 'scale(1.02) translateY(-8px)' : 'translateY(-8px)';
-      });
-      
-      card.addEventListener('mouseleave', function() {
-        this.style.transform = this.classList.contains('featured') ? 'scale(1.02)' : 'translateY(0)';
-      });
-    });
-
-    // Service card hover effects
-    document.querySelectorAll('.service-card').forEach(card => {
-      card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-4px)';
-      });
-      
-      card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-      });
-    });
-
-    // Add CSS for ripple effect
-    const style = document.createElement('style');
-    style.textContent = `
-      .ripple {
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.4);
-        pointer-events: none;
-        transform: scale(0);
-        animation: ripple-animation 0.6s linear;
-        z-index: 0;
-      }
-      
-      @keyframes ripple-animation {
-        to {
-          transform: scale(4);
-          opacity: 0;
-        }
-      }
-      
-      .btn {
-        position: relative;
-        overflow: hidden;
-      }
-    `;
-    document.head.appendChild(style);
-
     // Add subtle animations on page load
     window.addEventListener('load', () => {
       document.querySelectorAll('.fade-in-up').forEach((el, index) => {
@@ -291,23 +209,3 @@
         nav.style.display = 'none'; // Hide on mobile for now
       }
     }
-
-    // Performance optimization
-    // Lazy load images when they come into view
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          if (img.dataset.src) {
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-            observer.unobserve(img);
-          }
-        }
-      });
-    });
-
-    // Observe any images with data-src attribute
-    document.querySelectorAll('img[data-src]').forEach(img => {
-      imageObserver.observe(img);
-    });
