@@ -3,19 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mohamed Fadlalla Creative Studio — خدمات تصميم وتسويق رقمي</title>
-  <meta name="description" content="خدمات تصميم شعار، مواقع، محتوى سوشيال ميديا، وإدارة حضور رقمي بأسعار مناسبة للسوق السوداني." />
+  <title>Mohamed Fadlalla Creative Studio</title>
+  <meta id="metaDescription" name="description" content="Branding, websites, and social content for Sudanese businesses. Clear packages, fast delivery, and WhatsApp support." />
+  <meta name="theme-color" content="#0b1020" />
+  <meta property="og:title" content="Mohamed Fadlalla Creative Studio" />
+  <meta property="og:description" content="Branding, websites, and social content for Sudanese businesses. Clear packages, fast delivery, and WhatsApp support." />
   <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-  
-  <!-- Material Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400..700,0..1,-50..200" rel="stylesheet">
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  
-  <!-- Analytics -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400..700,0..1,-50..200" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Manrope:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -27,250 +26,377 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="header-content">
-        <div class="brand">
-          <div class="logo">MF</div>
-          <div class="brand-text">
-            <h1>Mohamed Fadlalla Creative Studio</h1>
-            <p>Professional design • Websites • Social content</p>
-          </div>
-        </div>
-        <button id="mobileMenuToggle" class="btn btn-ghost mobile-menu-toggle" aria-label="Toggle menu" style="display: none;">
-          <span class="material-symbols-outlined">menu</span>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Mohamed Fadlalla Creative Studio">
+        <span class="mark" aria-hidden="true">MF</span>
+        <span class="brand-copy">
+          <span class="brand-name">Mohamed Fadlalla</span>
+          <span class="brand-tag" data-i18n="brand_tag">Creative Studio</span>
+        </span>
+      </a>
+
+      <button id="mobileMenuToggle" class="icon-btn menu-btn" aria-controls="mainNav" aria-expanded="false">
+        <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+        <span class="sr-only" data-i18n="menu">Menu</span>
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <a href="#work" class="nav-link" data-i18n="nav_work">Work</a>
+        <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
+        <a href="#process" class="nav-link" data-i18n="nav_process">Process</a>
+        <a href="#testimonials" class="nav-link" data-i18n="nav_testimonials">Reviews</a>
+        <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+
+        <button id="langToggle" class="icon-btn lang-btn" aria-label="Switch language">
+          <span class="material-symbols-outlined" aria-hidden="true">translate</span>
+          <span class="lang-label" data-i18n="lang_label">العربية</span>
         </button>
-        <nav class="nav" id="mainNav">
-          <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
-          <a href="#testimonials" class="nav-link" data-i18n="nav_testimonials">Testimonials</a>
-          <button id="langToggle" class="btn btn-ghost lang-toggle" aria-label="Switch language">
-            <span class="material-symbols-outlined" style="font-size: 18px;">translate</span>
-            <span data-i18n="lang_label">العربية</span>
-          </button>
-          <a href="https://calendly.com/mohamedfadlalla/30min" target="_blank" rel="noopener" class="btn btn-primary">
-            <span class="material-symbols-outlined">calendar_month</span>
-            <span data-i18n="nav_whatsapp">WhatsApp</span>
-          </a>
-        </nav>
-      </div>
+
+        <a id="whatsAppNavCta" href="https://wa.me/249129438898" target="_blank" rel="noopener" class="btn btn-primary nav-cta">
+          <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+          <span data-i18n="nav_whatsapp">WhatsApp</span>
+        </a>
+      </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1 class="display-large" data-i18n="hero_title">Does your digital presence reflect your business quality?</h1>
-          <p class="body-large" data-i18n="hero_subtitle">I provide complete design and digital marketing solutions tailored for the Sudanese market — websites, logos, social content, and short videos at competitive prices.</p>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="kicker" data-i18n="hero_kicker">Affordable doesn't mean ordinary.</p>
+          <h1 class="hero-title" data-i18n="hero_title">Design that earns trust for your business.</h1>
+          <p class="hero-sub" data-i18n="hero_subtitle">Branding, websites, social content, and short videos for Sudanese businesses. Clear packages, fast delivery, and WhatsApp support.</p>
 
-          <div class="features">
-            <span class="chip" data-i18n="chip1">Affordable Price</span>
-            <span class="chip" data-i18n="chip2">Fast Delivery</span>
-            <span class="chip" data-i18n="chip3">WhatsApp Support</span>
-            <span class="chip" data-i18n="chip4">Ready Packages</span>
-            <span class="chip" data-i18n="chip5">Quality Guaranteed</span>
+          <div class="hero-badges" aria-label="Highlights">
+            <span class="badge" data-i18n="badge1">Fast turnaround</span>
+            <span class="badge" data-i18n="badge2">Clear scope</span>
+            <span class="badge" data-i18n="badge3">WhatsApp support</span>
+            <span class="badge" data-i18n="badge4">Quality-first</span>
           </div>
 
-          <div class="cta-buttons">
-            <a href="https://calendly.com/mohamedfadlalla/30min" target="_blank" rel="noopener" class="btn btn-primary">
-              <span class="material-symbols-outlined">rocket_launch</span>
-              <span data-i18n="cta_start">Get Started — WhatsApp</span>
+          <div class="hero-actions">
+            <a href="#quote" class="btn btn-primary">
+              <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
+              <span data-i18n="cta_quote">Get a quick quote</span>
             </a>
-            <a href="#services" class="btn btn-secondary">
-              <span class="material-symbols-outlined">visibility</span>
-              <span data-i18n="cta_services">View Services</span>
+            <a href="#work" class="btn btn-soft">
+              <span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>
+              <span data-i18n="cta_work">See recent work</span>
+            </a>
+          </div>
+
+          <div class="proof" aria-label="Stats">
+            <div class="proof-item">
+              <span class="proof-num">50+</span>
+              <span class="proof-label" data-i18n="stat_projects">Projects</span>
+            </div>
+            <div class="proof-item">
+              <span class="proof-num">30+</span>
+              <span class="proof-label" data-i18n="stat_clients">Clients</span>
+            </div>
+            <div class="proof-item">
+              <span class="proof-num">24h</span>
+              <span class="proof-label" data-i18n="stat_response">Response</span>
+            </div>
+            <div class="proof-item">
+              <span class="proof-num">100%</span>
+              <span class="proof-label" data-i18n="stat_quality">Care</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="panel-card reveal" aria-label="Studio highlights">
+            <div class="panel-top">
+              <div class="panel-title" data-i18n="panel_title">A studio, not just a designer</div>
+              <div class="panel-pill">
+                <span class="dot" aria-hidden="true"></span>
+                <span data-i18n="panel_pill">Brief - Design - Launch</span>
+              </div>
+            </div>
+
+            <div class="panel-grid">
+              <div class="tile">
+                <div class="tile-icon" aria-hidden="true">
+                  <span class="material-symbols-outlined">language</span>
+                </div>
+                <div class="tile-copy">
+                  <div class="tile-title" data-i18n="tile1_title">Websites</div>
+                  <div class="tile-sub" data-i18n="tile1_sub">Fast, responsive, SEO-ready</div>
+                </div>
+              </div>
+              <div class="tile">
+                <div class="tile-icon" aria-hidden="true">
+                  <span class="material-symbols-outlined">palette</span>
+                </div>
+                <div class="tile-copy">
+                  <div class="tile-title" data-i18n="tile2_title">Branding</div>
+                  <div class="tile-sub" data-i18n="tile2_sub">Logos + identity</div>
+                </div>
+              </div>
+              <div class="tile">
+                <div class="tile-icon" aria-hidden="true">
+                  <span class="material-symbols-outlined">movie</span>
+                </div>
+                <div class="tile-copy">
+                  <div class="tile-title" data-i18n="tile3_title">Short-form</div>
+                  <div class="tile-sub" data-i18n="tile3_sub">Reels, TikTok, ads</div>
+                </div>
+              </div>
+              <div class="tile">
+                <div class="tile-icon" aria-hidden="true">
+                  <span class="material-symbols-outlined">support_agent</span>
+                </div>
+                <div class="tile-copy">
+                  <div class="tile-title" data-i18n="tile4_title">Support</div>
+                  <div class="tile-sub" data-i18n="tile4_sub">WhatsApp follow-up</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quote-card reveal" id="quote">
+            <h2 class="quote-title" data-i18n="quote_title">Tell me what you need</h2>
+            <p class="quote-sub" data-i18n="quote_sub">I will reply with a clear plan, timeline, and next steps.</p>
+
+            <form class="quote-form" id="quoteForm">
+              <label class="field">
+                <span class="field-label" data-i18n="quote_service_label">Service</span>
+                <select id="quoteService" name="service">
+                  <option value="website" data-i18n="service_opt_website">Website</option>
+                  <option value="branding" data-i18n="service_opt_branding">Branding</option>
+                  <option value="social" data-i18n="service_opt_social">Social content</option>
+                  <option value="video" data-i18n="service_opt_video">Video editing</option>
+                  <option value="email" data-i18n="service_opt_email">Business email</option>
+                  <option value="other" data-i18n="service_opt_other">Something else</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span class="field-label" data-i18n="quote_msg_label">Message</span>
+                <textarea id="quoteMessage" rows="4" data-i18n-placeholder="quote_msg_placeholder" placeholder="What do you do, and what are you trying to achieve?"></textarea>
+              </label>
+
+              <div class="quote-actions">
+                <button type="submit" class="btn btn-primary">
+                  <span class="material-symbols-outlined" aria-hidden="true">send</span>
+                  <span data-i18n="quote_send">Send on WhatsApp</span>
+                </button>
+                <a href="https://calendly.com/mohamedfadlalla/30min" target="_blank" rel="noopener" class="btn btn-ghost">
+                  <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+                  <span data-i18n="quote_book">Book a call</span>
+                </a>
+              </div>
+
+              <p class="fineprint" data-i18n="quote_note">No spam. Just a clear estimate and a simple plan.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="work_kicker">Recent work</p>
+          <h2 class="section-title" data-i18n="work_title">Clean design, clear results</h2>
+          <p class="section-sub" data-i18n="work_sub">A couple of projects that show the style: practical, fast, and built for real users.</p>
+        </div>
+
+        <div class="work-grid">
+          <a class="work-card reveal" href="https://biomedicalmd.online" target="_blank" rel="noopener">
+            <div class="work-top">
+              <div class="work-title">biomedicalmd.online</div>
+              <span class="work-pill" data-i18n="work_pill1">Website</span>
+            </div>
+            <p class="work-desc" data-i18n="work_desc1">A professional, simple site for a medical practice with clear services and easy contact.</p>
+            <div class="work-meta">
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+              <span data-i18n="work_open">Open</span>
+            </div>
+          </a>
+
+          <a class="work-card reveal" href="https://adilhamid.uk" target="_blank" rel="noopener">
+            <div class="work-top">
+              <div class="work-title">adilhamid.uk</div>
+              <span class="work-pill" data-i18n="work_pill2">Portfolio</span>
+            </div>
+            <p class="work-desc" data-i18n="work_desc2">An author site built to surface books and ideas, and make discovery easy for readers.</p>
+            <div class="work-meta">
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+              <span data-i18n="work_open">Open</span>
+            </div>
+          </a>
+
+          <div class="work-card work-card--static reveal" aria-label="Offer">
+            <div class="work-top">
+              <div class="work-title" data-i18n="work_card3_title">Quick service</div>
+              <span class="work-pill" data-i18n="work_pill3">CV / Portfolio</span>
+            </div>
+            <p class="work-desc" data-i18n="work_desc3">Need something fast for applications or social? I can prepare a clean CV or a portfolio page.</p>
+            <div class="work-actions">
+              <a class="btn btn-soft" href="#quote">
+                <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
+                <span data-i18n="work_card3_btn1">Ask about it</span>
+              </a>
+              <a class="btn btn-ghost" href="#contact">
+                <span class="material-symbols-outlined" aria-hidden="true">call</span>
+                <span data-i18n="work_card3_btn2">Contact</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="services_kicker">Services</p>
+          <h2 class="section-title" data-i18n="services_title">Everything you need to look professional online</h2>
+          <p class="section-sub" data-i18n="services_subtitle">Pick a package or mix services. I keep the scope clear and the delivery fast.</p>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true"><span class="material-symbols-outlined">language</span></div>
+            <h3 class="service-title" data-i18n="service1_title">Website Design</h3>
+            <p class="service-desc" data-i18n="service1_desc">Fast, responsive websites that make your business easy to understand and easy to contact.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true"><span class="material-symbols-outlined">palette</span></div>
+            <h3 class="service-title" data-i18n="service2_title">Branding and Logo</h3>
+            <p class="service-desc" data-i18n="service2_desc">A memorable logo and a simple identity guide so your brand stays consistent everywhere.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true"><span class="material-symbols-outlined">share</span></div>
+            <h3 class="service-title" data-i18n="service3_title">Social Media Content</h3>
+            <p class="service-desc" data-i18n="service3_desc">Posts and templates designed for fast publishing: clean, readable, and on-brand.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true"><span class="material-symbols-outlined">movie</span></div>
+            <h3 class="service-title" data-i18n="service4_title">Short Videos</h3>
+            <p class="service-desc" data-i18n="service4_desc">Reels and TikTok edits that keep attention and match your brand style.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true"><span class="material-symbols-outlined">manage_accounts</span></div>
+            <h3 class="service-title" data-i18n="service5_title">Account Management</h3>
+            <p class="service-desc" data-i18n="service5_desc">Monthly plans for content, engagement, and simple performance reporting.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true"><span class="material-symbols-outlined">alternate_email</span></div>
+            <h3 class="service-title" data-i18n="service6_title">Business Email Setup</h3>
+            <p class="service-desc" data-i18n="service6_desc">Set up a professional email for your domain with DNS and security basics included.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="process_kicker">Process</p>
+          <h2 class="section-title" data-i18n="process_title">Simple, transparent, and fast</h2>
+          <p class="section-sub" data-i18n="process_sub">No complicated jargon. Just a clear path from brief to launch.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-num" aria-hidden="true">1</div>
+            <h3 class="step-title" data-i18n="step1_title">Quick brief</h3>
+            <p class="step-desc" data-i18n="step1_desc">We define goals, pages, deliverables, and timeline in one short chat.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num" aria-hidden="true">2</div>
+            <h3 class="step-title" data-i18n="step2_title">Design and revisions</h3>
+            <p class="step-desc" data-i18n="step2_desc">You get a clean first version fast, then we refine based on your feedback.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num" aria-hidden="true">3</div>
+            <h3 class="step-title" data-i18n="step3_title">Launch and support</h3>
+            <p class="step-desc" data-i18n="step3_desc">We publish, test on mobile, and I stay available on WhatsApp for follow-ups.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="testimonials_kicker">Reviews</p>
+          <h2 class="section-title" data-i18n="testimonials_title">What clients say</h2>
+          <p class="section-sub" data-i18n="testimonials_subtitle">Real feedback from real projects.</p>
+        </div>
+
+        <div class="quote-grid">
+          <figure class="quote-item reveal">
+            <blockquote class="quote-text" data-i18n="t1_text">"The new website made my practice more professional and clear. Patients understand my services better, and contacting me is easier."</blockquote>
+            <figcaption class="quote-by">
+              <span class="quote-name" data-i18n="t1_name">Dr. Moaab Ali</span>
+              <span class="quote-role" data-i18n="t1_role">Biologist - biomedicalmd.online</span>
+            </figcaption>
+          </figure>
+
+          <figure class="quote-item reveal">
+            <blockquote class="quote-text" data-i18n="t2_text">"My books and ideas reached a wider audience. The design reflects my identity professionally, and the site is easy to explore."</blockquote>
+            <figcaption class="quote-by">
+              <span class="quote-name" data-i18n="t2_name">Dr. Adel Hamed</span>
+              <span class="quote-role" data-i18n="t2_role">Author and Researcher - adilhamid.uk</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-copy">
+            <h2 class="section-title" data-i18n="contact_title">Ready to start?</h2>
+            <p class="section-sub" data-i18n="contact_subtitle">Message me on WhatsApp, or book a call. I usually reply within 24 hours.</p>
+          </div>
+          <div class="contact-actions">
+            <a id="whatsAppContactCta" href="https://wa.me/249129438898" target="_blank" rel="noopener" class="btn btn-primary">
+              <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+              <span data-i18n="contact_whatsapp">Message on WhatsApp</span>
+            </a>
+            <a href="https://calendly.com/mohamedfadlalla/30min" target="_blank" rel="noopener" class="btn btn-soft">
+              <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+              <span data-i18n="contact_call">Book a call</span>
+            </a>
+            <a href="tel:+249129438898" class="btn btn-ghost">
+              <span class="material-symbols-outlined" aria-hidden="true">call</span>
+              <span data-i18n="contact_phone">Call</span>
             </a>
           </div>
         </div>
-
-        <div class="hero-cards">
-          <div class="hero-card">
-            <h3>
-              <span class="material-symbols-outlined card-icon">bolt</span>
-              <span data-i18n="hero_card1_title">Quick Service: CV or Portfolio Setup</span>
-            </h3>
-            <p class="body-medium" data-i18n="hero_card1_desc">Transform your identity into a professional file suitable for job applications or showcasing services on social media.</p>
-            <p class="body-medium" style="margin-top: var(--space-1); color: var(--md-sys-color-primary); font-weight: 600;" data-i18n="hero_card1_cta">Special price for limited time — Contact us now</p>
-          </div>
-
-          <div class="hero-card">
-            <h3>
-              <span class="material-symbols-outlined card-icon">event_available</span>
-              <span data-i18n="hero_card2_title">Quick Agreement via WhatsApp</span>
-            </h3>
-            <p class="body-medium" data-i18n="hero_card2_desc">A quick introductory call (10-15 minutes) to define project requirements with a clear execution plan.</p>
-            <div class="cta-buttons" style="margin-top: var(--space-2);">
-              <a href="https://calendly.com/mohamedfadlalla/30min" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 0.8rem; padding: var(--space-1) var(--space-2);">
-                <span class="material-symbols-outlined" style="font-size: 16px;">event</span>
-                <span data-i18n="hero_card2_btn1">Call or Message</span>
-              </a>
-              <a href="#contact" class="btn btn-ghost" style="font-size: 0.8rem; padding: var(--space-1) var(--space-2);">
-                <span data-i18n="hero_card2_btn2">Contact Info</span>
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Stats Section -->
-  <section class="section">
-    <div class="container">
-      <div class="stats scroll-reveal">
-        <div class="stats-grid">
-          <div class="stat-item">
-            <span class="stat-number">50+</span>
-            <span class="stat-label" data-i18n="stat1">Projects Completed</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">30+</span>
-            <span class="stat-label" data-i18n="stat2">Satisfied Clients</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">24h</span>
-            <span class="stat-label" data-i18n="stat3">Avg. Response Time</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">100%</span>
-            <span class="stat-label" data-i18n="stat4">Quality Guarantee</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="section">
-    <div class="container">
-      <div class="section-header scroll-reveal">
-        <h2 class="headline-medium" data-i18n="services_title">Our Premium Services</h2>
-        <p data-i18n="services_subtitle">Comprehensive solutions for building your digital presence</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card scroll-reveal">
-          <div class="service-header">
-            <div class="service-icon">
-              <span class="material-symbols-outlined">language</span>
-            </div>
-            <h3 class="title-large" data-i18n="service1_title">Website Design</h3>
-          </div>
-          <p class="body-medium" data-i18n="service1_desc">Fast, responsive, and mobile-friendly websites. Fully compatible with small and medium business requirements.</p>
-        </div>
-
-        <div class="service-card scroll-reveal">
-          <div class="service-header">
-            <div class="service-icon">
-              <span class="material-symbols-outlined">palette</span>
-            </div>
-            <h3 class="title-large" data-i18n="service2_title">Visual Identity & Logo</h3>
-          </div>
-          <p class="body-medium" data-i18n="service2_desc">Professional logo and simple identity guide to help maintain brand consistency.</p>
-        </div>
-
-        <div class="service-card scroll-reveal">
-          <div class="service-header">
-            <div class="service-icon">
-              <span class="material-symbols-outlined">share</span>
-            </div>
-            <h3 class="title-large" data-i18n="service3_title">Social Media Content</h3>
-          </div>
-          <p class="body-medium" data-i18n="service3_desc">Static posts, short videos (Reels/TikTok), and designs ready for immediate publishing.</p>
-        </div>
-
-        <div class="service-card scroll-reveal">
-          <div class="service-header">
-            <div class="service-icon">
-              <span class="material-symbols-outlined">manage_accounts</span>
-            </div>
-            <h3 class="title-large" data-i18n="service4_title">Account Management</h3>
-          </div>
-          <p class="body-medium" data-i18n="service4_desc">Monthly plans for content management, engagement, and performance analysis.</p>
-        </div>
-
-        <div class="service-card scroll-reveal">
-          <div class="service-header">
-            <div class="service-icon">
-              <span class="material-symbols-outlined">movie</span>
-            </div>
-            <h3 class="title-large" data-i18n="service5_title">Video Editing</h3>
-          </div>
-          <p class="body-medium" data-i18n="service5_desc">Professional editing suitable for TikTok and Facebook — short, engaging, and ready for publishing.</p>
-        </div>
-
-        <div class="service-card scroll-reveal">
-          <div class="service-header">
-            <div class="service-icon">
-              <span class="material-symbols-outlined">email</span>
-            </div>
-            <h3 class="title-large" data-i18n="service6_title">Business Email Setup</h3>
-          </div>
-          <p class="body-medium" data-i18n="service6_desc">Set up a professional email server for your business (Google Workspace / DNS setup / security).</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="section">
-    <div class="container">
-      <div class="section-header scroll-reveal">
-        <h2 class="headline-medium" data-i18n="testimonials_title">Client Reviews</h2>
-        <p data-i18n="testimonials_subtitle">What our clients say about our services</p>
-      </div>
-      <div class="testimonials scroll-reveal">
-        <div class="testimonial-grid">
-          <div class="testimonial-card">
-            <p class="testimonial-text">"The new website made my medical practice more professional and clear. Patients now understand my services better and contacting me has become easier. Thank you for the excellent work."</p>
-            <div>
-              <div class="testimonial-author">Dr. Moaab Ali</div>
-              <div class="testimonial-role">Biologist - biomedicalmd.online</div>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <p class="testimonial-text">"Since he designed the website for me, my books and ideas reached a wider audience. The design reflects my intellectual identity professionally, and the site is easy for those searching for my work."</p>
-            <div>
-              <div class="testimonial-author">Dr. Adel Hamed</div>
-              <div class="testimonial-role">Author & Researcher - adilhamid.uk</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="contact scroll-reveal">
-        <div class="contact-content">
-          <h3 class="headline-medium" data-i18n="contact_title">Ready to start?</h3>
-          <p class="body-large" data-i18n="contact_subtitle">Send a message or call via WhatsApp and we'll respond during business hours.</p>
-        </div>
-        <div class="contact-actions">
-          <a href="https://calendly.com/mohamedfadlalla/30min" target="_blank" rel="noopener" class="btn btn-primary">
-            <span class="material-symbols-outlined">calendar_month</span>
-            <span data-i18n="contact_whatsapp">Write on WhatsApp</span>
-          </a>
-          <a href="tel:+249129438898" class="btn btn-secondary">
-            <span class="material-symbols-outlined">call</span>
-            +249 129 438 898
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Mohamed Fadlalla Creative Studio — All rights reserved • 
-        <a href="https://mohamedfadlalla.github.io/" target="_blank">Visit site</a>
+    <div class="container footer-inner">
+      <p class="footer-text">
+        <span>&copy; <span id="year"></span></span>
+        <span class="footer-sep" aria-hidden="true">•</span>
+        <span>Mohamed Fadlalla Creative Studio</span>
       </p>
+      <a class="footer-link" href="#top" data-i18n="footer_back">Back to top</a>
     </div>
   </footer>
+
+  <a class="float-whatsapp" href="https://wa.me/249129438898" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+  </a>
 
   <script src="script.js" defer></script>
 </body>
