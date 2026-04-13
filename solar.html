@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حلول الطاقة الشمسية</title>
+    <link rel="stylesheet" href="solar-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">اسم شركتك للطاقة الشمسية</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#portfolio">سابقة الأعمال</a></li>
+                    <li><a href="#calculator">حاسبة الاحتياج</a></li>
+                    <li><a href="#contact">اطلب الآن</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>استثمر في شمس السودان، ووفر قروشك</h2>
+                <p>نقدم لك حلول طاقة شمسية متكاملة، مدروسة بعناية، ومصممة لتناسب احتياجاتك سواء للبيت، الزراعة، أو الشغل.</p>
+                <a href="#calculator" class="btn btn-primary">احسب احتياجك المبدئي</a>
+                <a href="#portfolio" class="btn btn-outline">شوف شغلنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">أنظمتنا وخدماتنا</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">🏠</div>
+                    <h3>أنظمة المنازل</h3>
+                    <p>تشغيل الإضاءة، المراوح، الشاشات، والثلاجات لتنعم بكهرباء مستقرة في بيتك.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🌾</div>
+                    <h3>طلمبات زراعية</h3>
+                    <p>أنظمة طاقة شمسية للمشاريع الزراعية لتشغيل الطلمبات وتوفير تكاليف الجازولين.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🏢</div>
+                    <h3>أنظمة تجارية</h3>
+                    <p>حلول للشركات، المدارس، والمستشفيات لضمان استمرارية العمل بدون انقطاع.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">سابقة أعمالنا</h2>
+            <p class="section-subtitle">جزء من المشاريع اللي نفذناها وركبناها لعملائنا</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-img bg-placeholder">صورة المشروع 1</div>
+                    <div class="portfolio-info">
+                        <h4>نظام منزلي 3 كيلو واط</h4>
+                        <p>تركيب نظام متكامل لتشغيل بيت كامل شامل مكيف اسبليت صغير.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img bg-placeholder">صورة المشروع 2</div>
+                    <div class="portfolio-info">
+                        <h4>طلمبة غاطسة 5.5 حصان</h4>
+                        <p>مشروع زراعي، تم تحويله بالكامل للعمل بالطاقة الشمسية.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img bg-placeholder">صورة المشروع 3</div>
+                    <div class="portfolio-info">
+                        <h4>نظام باك اب 5 كيلو واط</h4>
+                        <p>نظام بطاريات وانفرتر لضمان استمرار الكهرباء وقت القطوعات.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="calculator">
+        <div class="container">
+            <h2 class="section-title">حاسبة الاحتياج المبدئية</h2>
+            <p class="section-subtitle">دخل الأجهزة العندك عشان تعرف تقريباً بتحتاج نظام قدر شنو</p>
+            
+            <div class="calc-wrapper">
+                <div class="calc-inputs">
+                    <div class="appliance-row">
+                        <label>لمبة (إضاءة)</label>
+                        <input type="number" id="qty-light" min="0" value="0">
+                    </div>
+                    <div class="appliance-row">
+                        <label>مروحة سقف/استاند</label>
+                        <input type="number" id="qty-fan" min="0" value="0">
+                    </div>
+                    <div class="appliance-row">
+                        <label>شاشة تلفزيون</label>
+                        <input type="number" id="qty-tv" min="0" value="0">
+                    </div>
+                    <div class="appliance-row">
+                        <label>ثلاجة صغيرة/متوسطة</label>
+                        <input type="number" id="qty-fridge" min="0" value="0">
+                    </div>
+                    <div class="appliance-row">
+                        <label>مكيف نسمة/متحرك</label>
+                        <input type="number" id="qty-ac-water" min="0" value="0">
+                    </div>
+                    <button id="calculate-btn" class="btn btn-primary">احسب النظام</button>
+                </div>
+                
+                <div class="calc-results" id="calc-results" style="display: none;">
+                    <h3>النتيجة التقريبية</h3>
+                    <div class="result-box">
+                        <p>إجمالي الاستهلاك التقريبي:</p>
+                        <strong id="total-watts">0 واط</strong>
+                    </div>
+                    <div class="result-box">
+                        <p>النظام المقترح:</p>
+                        <strong id="system-size">0 كيلو واط</strong>
+                    </div>
+                    <p class="calc-note">* دي حسبة مبدئية جداً عشان تديك فكرة. السعر والتفاصيل الدقيقة بتحتاج دراسة لحالتك.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">اطلب نظامك الآن</h2>
+            <p class="section-subtitle">املأ الفورم ده وحنتواصل معاك بأسرع فرصة</p>
+            
+            <form class="contact-form" id="solar-contact-form">
+                <div class="form-group">
+                    <label for="name">الاسم</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">رقم التلفون (واتساب)</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="system-type">نوع النظام المطلوب</label>
+                    <select id="system-type">
+                        <option value="home">منزلي</option>
+                        <option value="agri">زراعي</option>
+                        <option value="commercial">تجاري</option>
+                        <option value="other">أخرى / غير متأكد</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">تفاصيل إضافية أو استفسار</label>
+                    <textarea id="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">إرسال الطلب</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 جميع الحقوق محفوظة - اسم شركتك للطاقة الشمسية</p>
+        </div>
+    </footer>
+
+    <script src="solar-script.js"></script>
+</body>
+</html>
