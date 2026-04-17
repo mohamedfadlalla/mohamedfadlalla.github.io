@@ -1,0 +1,7 @@
+PRICING_STRATEGY.md
+SALES_SCRIPT.md
+node_modules/
+.DS_Store
+
+# Outreach research data (sensitive prospect info)
+outreach/
