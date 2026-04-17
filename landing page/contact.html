@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - شركة نادكو للطاقه الشمسيه</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2E7D32;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555555;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #2E7D32;
+        }
+
+        .page-header {
+            padding: 150px 0 50px;
+            text-align: center;
+            background: linear-gradient(180deg, #ffffff 0%, #f8faf8 100%);
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2E7D32;
+            margin-bottom: 15px;
+        }
+
+        .contact-section {
+            padding: 80px 0;
+            background: #fafafa;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-info h2 {
+            font-size: 1.5rem;
+            color: #2E7D32;
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            margin-bottom: 25px;
+        }
+
+        .info-item h3 {
+            font-size: 1.1rem;
+            color: #2E7D32;
+            margin-bottom: 8px;
+        }
+
+        .info-item p {
+            color: #555555;
+            font-size: 1rem;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128c7e;
+        }
+
+        .contact-form {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-form h2 {
+            font-size: 1.5rem;
+            color: #2E7D32;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2E7D32;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #2E7D32;
+            color: #ffffff;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #1b5e20;
+        }
+
+        footer {
+            background: #2E7D32;
+            color: #ffffff;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 20px;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="Nadco Solar"></a>
+                    <span class="logo-text">شركة نادكو للطاقه الشمسيه</span>
+                </div>
+                <nav>
+                    <a href="index.html">الرئيسية</a>
+                    <a href="projects.html">مشاريعنا</a>
+                    <a href="contact.html" class="active">اتصل بنا</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>اتصل بنا</h1>
+            <p>نحن هنا لمساعدتك - توا��ل معنا的任何 استفسار</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>معلومات التواصل</h2>
+                    <div class="info-item">
+                        <h3>الواتساب</h3>
+                        <p>+249 90 666 6654</p>
+                        <a href="https://wa.me/249906666654" class="whatsapp-btn">تواصل على الواتساب</a>
+                    </div>
+                    <div class="info-item">
+                        <h3>الهاتف</h3>
+                        <p>012 360 0907</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>الموقع</h3>
+                        <p>الخرطان، السودان</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>البريد الإلكتروني</h3>
+                        <p>info@nadcosolar.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>ارسل لنا رسالة</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">الاسم</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">ارسال</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة © شركة نادكو للطاقه الشمسيه</p>
+        </div>
+    </footer>
+</body>
+</html>
