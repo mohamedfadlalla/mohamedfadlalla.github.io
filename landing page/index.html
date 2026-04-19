@@ -574,15 +574,37 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding-bottom: 70px;
+            }
+
             .header-content {
-                flex-direction: column;
-                gap: 15px;
+                justify-content: center;
+                gap: 0;
             }
 
             nav {
-                gap: 20px;
-                flex-wrap: wrap;
-                justify-content: center;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                box-shadow: 0 -4px 20px rgba(0,0,0,0.05);
+                padding: 15px 10px;
+                display: flex;
+                justify-content: space-around;
+                gap: 10px;
+                z-index: 1000;
+                border-top: 1px solid rgba(0,0,0,0.05);
+                flex-wrap: nowrap;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                flex: 1;
+                text-align: center;
             }
 
             .hero {
@@ -737,12 +759,12 @@
             <div class="contact-grid">
                 <div class="contact-card reveal-up" style="transition-delay: 0.1s;">
                     <h3>الواتساب</h3>
-                    <p>+249 90 666 6654</p>
+                    <p dir="ltr">+249 90 666 6654</p>
                     <a href="https://wa.me/249906666654" class="whatsapp-btn">تواصل معنا</a>
                 </div>
                 <div class="contact-card reveal-up" style="transition-delay: 0.2s;">
                     <h3>الهاتف</h3>
-                    <p>012 360 0907</p>
+                    <p dir="ltr">+249 12 360 0907</p>
                 </div>
                 <div class="contact-card reveal-up" style="transition-delay: 0.3s;">
                     <h3>الموقع</h3>

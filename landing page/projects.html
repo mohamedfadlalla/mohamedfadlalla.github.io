@@ -144,13 +144,36 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding-bottom: 70px;
+            }
+
             .header-content {
-                flex-direction: column;
-                gap: 15px;
+                justify-content: center;
+                gap: 0;
             }
 
             nav {
-                gap: 20px;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                box-shadow: 0 -4px 20px rgba(0,0,0,0.05);
+                padding: 15px 10px;
+                display: flex;
+                justify-content: space-around;
+                gap: 10px;
+                z-index: 1000;
+                border-top: 1px solid rgba(0,0,0,0.05);
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                flex: 1;
+                text-align: center;
             }
 
             .gallery-grid {
