@@ -42,7 +42,7 @@
       pain3_title: "Your competitors sell the same thing — you have no way to stand out",
       pain3_desc: "When everyone posts the same photos and prices, the one who looks professional wins the deal.",
       pain4_title: "You know you need a website but don't know where to start or what it costs",
-      pain4_desc: "That's exactly why I offer a free 15-minute discovery call. No pressure. Just clarity.",
+      pain4_desc: "That's exactly why I offer a free 30-minute discovery call. No pressure. Just clarity.",
 
       edu_kicker: "Why a website changes everything",
       edu_title: "Facebook is for discovery. A website is for trust.",
@@ -55,7 +55,7 @@
       edu3_desc: "Send a professional link instead of explaining everything over the phone or WhatsApp. Let the website do the selling.",
 
       discovery_title: "Still have questions?",
-      discovery_subtitle: "Not sure what you need? That's fine. Book a free 15-minute discovery call. We'll talk about your business, your customers, and what's holding you back. You'll leave with a clear plan — even if you don't work with me.",
+      discovery_subtitle: "Not sure what you need? That's fine. Book a free 30-minute discovery call. We'll talk about your business, your customers, and what's holding you back. You'll leave with a clear plan — even if you don't work with me.",
       discovery_book: "Book a discovery call",
       discovery_phone: "Call +249129438898",
 
@@ -73,7 +73,7 @@
       quote_title: "Tell me what you need",
       quote_sub: "I will reply with a clear plan, timeline, and next steps.",
       quote_service_label: "Service",
-      service_opt_discovery: "Free discovery session (15 min)",
+      service_opt_discovery: "Free discovery session (30 min)",
       service_opt_website: "Website",
       service_opt_branding: "Branding",
       service_opt_social: "Social content",
@@ -119,7 +119,7 @@
       process_kicker: "Process",
       process_title: "Simple, transparent, and fast",
       process_sub: "No complicated jargon. Just a clear path from discovery to launch.",
-      step1_title: "Free discovery call (15 min)",
+      step1_title: "Free discovery call (30 min)",
       step1_desc: "Tell me your business, your customers, your biggest time-waster. I'll show you exactly what you need. No pressure.",
       step2_title: "Design and revisions",
       step2_desc: "You get a clean first version fast, then we refine based on your feedback.",
@@ -188,7 +188,7 @@
       pain3_title: "منافسوك يبيعون نفس المنتج — وليس لديك طريقة للتميز",
       pain3_desc: "عندما ينشر الجميع نفس الصور والأسعار، فإن من يبدو أكثر احترافية هو من يفوز بالصفقة.",
       pain4_title: "تعلم أنك بحاجة إلى موقع، لكنك لا تعرف من أين تبدأ أو كم سيكلف",
-      pain4_desc: "لهذا السبب أقدم مكالمة استكشافية مجانية لمدة 15 دقيقة. بلا التزامات، مجرد وضوح.",
+      pain4_desc: "لهذا السبب أقدم مكالمة استكشافية مجانية لمدة 30 دقيقة. بلا التزامات، مجرد وضوح.",
 
       edu_kicker: "لماذا يغير الموقع الإلكتروني كل شيء",
       edu_title: "فيسبوك للاكتشاف. الموقع الإلكتروني للثقة.",
@@ -201,7 +201,7 @@
       edu3_desc: "أرسل رابطاً احترافياً بدلاً من شرح كل شيء عبر الهاتف أو واتساب. دع الموقع يتولى مهمة البيع.",
 
       discovery_title: "هل ما زال لديك أسئلة؟",
-      discovery_subtitle: "لست متأكداً مما تحتاجه؟ لا مشكلة. احجز مكالمة استكشافية مجانية لمدة 15 دقيقة. سنتحدث عن عملك، وعملائك، وما يعيق تقدمك. ستخرج بخطة واضحة — حتى وإن لم نعمل معاً.",
+      discovery_subtitle: "لست متأكداً مما تحتاجه؟ لا مشكلة. احجز مكالمة استكشافية مجانية لمدة 30 دقيقة. سنتحدث عن عملك، وعملائك، وما يعيق تقدمك. ستخرج بخطة واضحة — حتى وإن لم نعمل معاً.",
       discovery_book: "احجز مكالمة استكشافية",
       discovery_phone: "اتصل +249129438898",
 
@@ -219,7 +219,7 @@
       quote_title: "أخبرني بما تحتاجه",
       quote_sub: "سأرد عليك بخطة واضحة، وجدول زمني، والخطوات التالية.",
       quote_service_label: "الخدمة",
-      service_opt_discovery: "جلسة استكشافية مجانية (15 دقيقة)",
+      service_opt_discovery: "جلسة استكشافية مجانية (30 دقيقة)",
       service_opt_website: "موقع إلكتروني",
       service_opt_branding: "هوية بصرية",
       service_opt_social: "محتوى منصات التواصل",
@@ -265,7 +265,7 @@
       process_kicker: "آلية العمل",
       process_title: "بسيطة، شفافة، وسريعة",
       process_sub: "بدون مصطلحات معقدة. مسار واضح من الاستكشاف إلى الإطلاق.",
-      step1_title: "مكالمة استكشافية مجانية (15 دقيقة)",
+      step1_title: "مكالمة استكشافية مجانية (30 دقيقة)",
       step1_desc: "حدثني عن عملك، وعملائك، وأكبر مضيع لوقتك. سأوضح لك بالضبط ما تحتاج إليه. دون أي ضغوط.",
       step2_title: "التصميم والمراجعات",
       step2_desc: "ستحصل على نسخة أولية أنيقة وسريعة، ثم نقوم بالتحسينات بناءً على ملاحظاتك.",
