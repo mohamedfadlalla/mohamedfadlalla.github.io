@@ -144,6 +144,64 @@
 
       footer_back: "Back to top",
 
+      team_page_title: "Team - Mohamed Fadlalla Creative Studio",
+      team_kicker: "About the studio",
+      team_title: "Meet the Team Behind Your Brand",
+      team_subtitle: "At Mohamed Fadlalla Creative Studio, we believe that a strong digital presence is never the result of one person—it's the outcome of a focused team, each bringing specialized expertise to elevate your business. We combine strategy, design, and technology to deliver work that is not only visually refined, but built to inspire trust and drive real results.",
+
+      team_mohamed_name: "Mohamed — Founder & Strategy Lead",
+      team_mohamed_role: "Founder & Strategy Lead",
+      team_mohamed_bio: "Mohamed leads every project with a clear strategic vision. He works closely with clients to understand their business, define priorities, and ensure that every decision—from design to delivery—serves a practical purpose. His focus is on clarity, efficiency, and measurable impact.",
+
+      team_ahmed_name: "Ahmed — Creative Designer",
+      team_ahmed_role: "Creative Designer",
+      team_ahmed_bio: "Ahmed shapes the visual identity of your brand. From logos to social content, his work is defined by precision, simplicity, and a deep understanding of what builds credibility in the eyes of your audience.",
+
+      team_sara_name: "Sara — Web & Technical Specialist",
+      team_sara_role: "Web & Technical Specialist",
+      team_sara_bio: "Sara is responsible for turning ideas into fully functional digital experiences. She develops fast, reliable websites and manages all technical aspects—from domain setup to business email and integrations—ensuring everything operates seamlessly.",
+
+      team_musa_name: "Musa — Video Editor",
+      team_musa_role: "Video Editor",
+      team_musa_bio: "Musa produces short-form video content designed to capture attention and communicate value instantly. His approach focuses on clarity, pacing, and delivering a message that resonates with today's fast-moving audiences.",
+
+      team_hiba_name: "Hiba — Account Manager",
+      team_hiba_role: "Account Manager",
+      team_hiba_bio: "Hiba ensures consistency and continuity. She manages content delivery, communication, and ongoing support—maintaining a smooth experience for every client and keeping your brand active and aligned.",
+
+      team_kicker: "About the studio",
+      team_title: "Meet the Team Behind Your Brand",
+      team_subtitle: "At Mohamed Fadlalla Creative Studio, we believe that a strong digital presence is never the result of one person—it's the outcome of a focused team, each bringing specialized expertise to elevate your business. We combine strategy, design, and technology to deliver work that is not only visually refined, but built to inspire trust and drive real results.",
+
+      team_mohamed_name: "Mohamed — Founder & Strategy Lead",
+      team_mohamed_role: "Founder & Strategy Lead",
+      team_mohamed_bio: "Mohamed leads every project with a clear strategic vision. He works closely with clients to understand their business, define priorities, and ensure that every decision—from design to delivery—serves a practical purpose. His focus is on clarity, efficiency, and measurable impact.",
+
+      team_ahmed_name: "Ahmed — Creative Designer",
+      team_ahmed_role: "Creative Designer",
+      team_ahmed_bio: "Ahmed shapes the visual identity of your brand. From logos to social content, his work is defined by precision, simplicity, and a deep understanding of what builds credibility in the eyes of your audience.",
+
+      team_sara_name: "Sara — Web & Technical Specialist",
+      team_sara_role: "Web & Technical Specialist",
+      team_sara_bio: "Sara is responsible for turning ideas into fully functional digital experiences. She develops fast, reliable websites and manages all technical aspects—from domain setup to business email and integrations—ensuring everything operates seamlessly.",
+
+      team_musa_name: "Musa — Video Editor",
+      team_musa_role: "Video Editor",
+      team_musa_bio: "Musa produces short-form video content designed to capture attention and communicate value instantly. His approach focuses on clarity, pacing, and delivering a message that resonates with today's fast-moving audiences.",
+
+      team_hiba_name: "Hiba — Account Manager",
+      team_hiba_role: "Account Manager",
+      team_hiba_bio: "Hiba ensures consistency and continuity. She manages content delivery, communication, and ongoing support—maintaining a smooth experience for every client and keeping your brand active and aligned.",
+
+      initial_mohamed: "M",
+      initial_ahmed: "A",
+      initial_sara: "S",
+      initial_musa: "M",
+      initial_hiba: "H",
+
+      team_cta_title: "A Team You Can Rely On",
+      team_cta_subtitle: "When you work with us, you're not relying on a single skillset—you're partnering with a team structured to deliver quality, speed, and consistency at every stage.",
+
       wa_prefix: "Hi Mohamed,",
       wa_service_label: "Service",
       wa_message_label: "Message"
@@ -160,6 +218,7 @@
       nav_work: "الأعمال",
       nav_services: "الخدمات",
       nav_process: "آلية العمل",
+      nav_team: "الفريق",
       nav_testimonials: "آراء العملاء",
       nav_contact: "تواصل معنا",
       nav_whatsapp: "واتساب",
@@ -288,11 +347,45 @@
       contact_call: "احجز مكالمة استكشافية",
       contact_phone: "اتصل بنا",
 
-      footer_back: "العودة للأعلى",
+       footer_back: "العودة للأعلى",
 
-      wa_prefix: "مرحباً محمد،",
-      wa_service_label: "الخدمة",
-      wa_message_label: "الرسالة"
+       team_page_title: "الفريق - Mohamed Fadlalla Creative Studio",
+       team_kicker: "عن الاستوديو",
+       team_title: "تعرف على الفريق خلف علامتك التجارية",
+       team_subtitle: "في Mohamed Fadlalla Creative Studio، نؤمن أن الحضور الرقمي القوي لا يصنعه فرد واحد، بل هو نتيجة عمل فريق متكامل، يجمع بين الخبرة والتخصص لرفع مستوى عملك. ندمج بين الاستراتيجية، التصميم، والتقنية لنقدم أعمالاً احترافية لا تركز فقط على المظهر، بل على بناء الثقة وتحقيق نتائج حقيقية.",
+
+       team_mohamed_name: "محمد — المؤسس وقائد الاستراتيجية",
+       team_mohamed_role: "المؤسس وقائد الاستراتيجية",
+       team_mohamed_bio: "يقود محمد كل مشروع برؤية واضحة. يعمل عن قرب مع العملاء لفهم طبيعة أعمالهم وتحديد الأولويات، وضمان أن كل خطوة—من التصميم إلى التنفيذ—لها هدف عملي يخدم نمو المشروع.",
+
+       team_ahmed_name: "أحمد — المصمم الإبداعي",
+       team_ahmed_role: "المصمم الإبداعي",
+       team_ahmed_bio: "أحمد مسؤول عن الهوية البصرية لعلامتك التجارية. يقدم تصاميم احترافية تجمع بين البساطة والدقة، وتساعد في بناء صورة قوية وموثوقة لدى جمهورك.",
+
+       team_sara_name: "سارة — مسؤولة التطوير والتقنية",
+       team_sara_role: "مسؤولة التطوير والتقنية",
+       team_sara_bio: "تحول سارة الأفكار إلى مواقع إلكترونية متكاملة وسريعة الأداء. كما تتولى جميع الجوانب التقنية مثل إعداد الدومين، الإيميل الرسمي، والربط مع وسائل التواصل، لضمان تجربة سلسة ومتكاملة.",
+
+       team_musa_name: "موسى — محرر الفيديو",
+       team_musa_role: "محرر الفيديو",
+       team_musa_bio: "ينتج موسى فيديوهات قصيرة مصممة لجذب الانتباه بسرعة ونقل الرسالة بوضوح. يركز على تقديم محتوى بسيط وفعال يتناسب مع طبيعة المنصات الحديثة.",
+
+       team_hiba_name: "هبة — مديرة الحسابات",
+       team_hiba_role: "مديرة الحسابات",
+       team_hiba_bio: "تضمن هبة استمرارية وتنظيم العمل. تدير عملية النشر، التواصل مع العملاء، والمتابعة المستمرة لضمان بقاء علامتك التجارية نشطة ومتناسقة.",
+
+       initial_mohamed: "م",
+       initial_ahmed: "أ",
+       initial_sara: "س",
+       initial_musa: "م",
+       initial_hiba: "ه",
+
+       team_cta_title: "فريق يمكنك الاعتماد عليه",
+       team_cta_subtitle: "عند العمل معنا، أنت لا تعتمد على شخص واحد، بل على فريق متكامل يعمل بتناغم لتقديم جودة عالية، سرعة في التنفيذ، ونتائج يمكن الاعتماد عليها.",
+
+       wa_prefix: "مرحباً محمد،",
+       wa_service_label: "الخدمة",
+       wa_message_label: "الرسالة"
     }
   };
 

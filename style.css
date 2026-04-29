@@ -1026,9 +1026,191 @@ textarea {
   color: var(--ink);
 }
 
-.footer-link:hover {
-  color: var(--accent);
-}
+  .footer-link:hover {
+    color: var(--accent);
+  }
+
+  /* Team Page */
+  .team-section {
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 32px;
+  }
+
+  .team-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow2);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 180ms var(--ease), box-shadow 180ms var(--ease);
+  }
+
+  .team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+  }
+
+  .team-photo {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--bg1);
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+
+  .team-photo .material-symbols-outlined {
+    font-size: 64px;
+    color: var(--muted2);
+    opacity: 0.3;
+    position: absolute;
+  }
+
+  .team-initial {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  .team-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .team-name {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    font-size: 22px;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  .team-role {
+    margin: 0 0 16px;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .team-bio {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .team-cta {
+    text-align: center;
+    background: var(--bg1);
+    padding: 80px 60px;
+    border-radius: var(--radius-lg);
+    margin-top: 40px;
+  }
+
+  .team-cta .section-title {
+    margin: 0 0 16px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .team-cta .section-sub {
+    margin: 0 0 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .team-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .team-cta .btn {
+    min-width: 220px;
+  }
+
+  /* Responsive Team */
+  @media (max-width: 768px) {
+    .team-hero {
+      padding-top: 100px;
+      padding-bottom: 48px;
+    }
+
+    .team-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .team-card {
+      padding: 32px 24px;
+    }
+
+    .team-photo {
+      width: 100px;
+      height: 100px;
+    }
+
+    .team-photo .material-symbols-outlined {
+      font-size: 56px;
+    }
+
+    .team-initial {
+      font-size: 40px;
+    }
+
+    .team-cta {
+      padding: 60px 24px;
+    }
+
+    .team-cta-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .team-cta .btn {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .team-hero .hero-title {
+      font-size: 32px;
+    }
+
+    .team-name {
+      font-size: 20px;
+    }
+
+    .team-bio {
+      font-size: 14px;
+    }
+  }
 
 .float-whatsapp {
   position: fixed;
@@ -1123,11 +1305,21 @@ textarea {
   content: "”";
 }
 
-[dir="rtl"] .discovery-card,
-[dir="rtl"] .contact-card {
-  flex-direction: row-reverse;
-  text-align: right;
-}
+  [dir="rtl"] .discovery-card,
+  [dir="rtl"] .contact-card,
+  [dir="rtl"] .team-cta {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+
+  [dir="rtl"] .team-cta-actions {
+    flex-direction: row-reverse;
+  }
+
+  [dir="rtl"] .team-section .section-head,
+  [dir="rtl"] .team-hero {
+    text-align: right;
+  }
 
 /* Responsive */
 @media (max-width: 1024px) {
@@ -1176,18 +1368,20 @@ textarea {
     margin: 0;
   }
 
-  .discovery-card,
-  .contact-card {
-    flex-direction: column;
-    text-align: center;
-    gap: 32px;
-  }
-  
-  [dir="rtl"] .discovery-card,
-  [dir="rtl"] .contact-card {
-    flex-direction: column;
-    text-align: center;
-  }
+   .discovery-card,
+   .contact-card,
+   .team-cta {
+     flex-direction: column;
+     text-align: center;
+     gap: 32px;
+   }
+   
+   [dir="rtl"] .discovery-card,
+   [dir="rtl"] .contact-card,
+   [dir="rtl"] .team-cta {
+     flex-direction: column;
+     text-align: center;
+   }
 }
 
 @media (max-width: 768px) {
